@@ -1,12 +1,12 @@
 ---
 layout: post
-title:  "Cordova App with RESTful API call"
+title:  "Cordova App with REST API call"
 date:   2016-06-02 17:38:45 +0300
 categories: cordova
 ---
 Cordova App
 
-This Cordova example app will make REST API calls to NASA's Open API ([NASA Open APIs]: https://api.nasa.gov/).
+This Cordova example app will make REST API calls to NASA's Open API "NASA Open APIs":https://api.nasa.gov/
 
 The first API call use APOD API (Astronomy Picture Of the Day). The API returns url to image and descriptive information about it (like copyright, description etc.).
 
