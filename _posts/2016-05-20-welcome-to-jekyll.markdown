@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
-date:   2016-05-20 17:38:45 +0300
-categories: jekyll update
+title:  "Cordova App with RESTful API call"
+date:   2016-06-02 17:38:45 +0300
+categories: cordova
 ---
 First posting
 
