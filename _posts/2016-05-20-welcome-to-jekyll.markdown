@@ -19,3 +19,5 @@ https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY
 
 The user interface is made by using JQuery Mobile. UI has two buttons in the header for API calls.
 
+!img/Screnshot_20160602.png
+
