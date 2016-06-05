@@ -21,4 +21,6 @@ The user interface is made by using JQuery Mobile. UI has two buttons in the hea
 
 ![screenshot]({{ site.baseurl }}/img/Screenshot_20160602.png)
 
+The complete project code can be found from GitHub [repository](https://github.com/juhahinkula/NasaApp.git)
+
 
