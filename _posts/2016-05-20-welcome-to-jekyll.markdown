@@ -6,7 +6,7 @@ categories: cordova
 ---
 Cordova App
 
-This Cordova example app will make REST API calls to NASA's Open API.
+This Cordova example app will make REST API calls to [NASA's Open API](https://api.nasa.gov/).
 
 The first API call use APOD API (Astronomy Picture Of the Day). The API returns url to image and descriptive information about it (like copyright, description etc.).
 
