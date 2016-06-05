@@ -17,6 +17,8 @@ Example query
 https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY
 {% endhighlight %}
 
+Note! This example is using the special DEMO_KEY API key. This API key can be used for initially exploring APIs prior to signing up, but it has much lower rate limits, so if you are creating your own apps you should signup for your own API key.
+
 The user interface is made by using JQuery Mobile. UI has two buttons in the header for API calls.
 
 ![screenshot]({{ site.baseurl }}/img/Screenshot_20160602.png)
