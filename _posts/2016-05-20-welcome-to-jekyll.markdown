@@ -36,7 +36,7 @@ Follow the [Get Started](https://cordova.apache.org/#getstarted) instructions fr
 <script type="text/javascript" src="js/jquery.mobile-1.4.5.js"></script>
 {% endhighlight %}
 
-**3. I have also used responsiveImg library which should be also included. Check more info from their [web site] (http://responsiveimg.com/)**
+**3. I have also used responsiveImg library which should be also included.** Check more info from their [web site](http://responsiveimg.com/)
 
 {% highlight html %}
 <script type="text/javascript" src="js/responsiveImg.js"></script>
@@ -84,7 +84,7 @@ $("#loadImage").click(function(){
 });
 {% endhighlight %}
 
-**6. Modify index.js file, Add listener to the second button which will load the random image. randomDate function is modified from [miguelmota's](https://gist.github.com/miguelmota/5b67e03845d840c949c4) function from GitHub. It will return random date between given two dates. The date is formatted according to NASA APIs date format.** 
+**6. Modify index.js file, Add listener to the second button which will load the random image.** randomDate function is modified from [miguelmota's](https://gist.github.com/miguelmota/5b67e03845d840c949c4) function from GitHub. It will return random date between given two dates. The date is formatted according to NASA APIs date format.
 
 {% highlight javascript %}
 $("#randomImage").click(function(){
