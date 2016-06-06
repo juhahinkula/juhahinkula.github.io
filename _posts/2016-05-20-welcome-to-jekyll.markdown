@@ -62,6 +62,7 @@ Follow the [Get Started](https://cordova.apache.org/#getstarted) instructions fr
 {% endhighlight %}
 
 **5. Modify index.js file, Add listener to the first button which will load the image of the current day**
+API call is done by using [JQuery ajax call](http://api.jquery.com/jquery.ajax/).
 
 {% highlight javascript %}
 var url = "https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY";
