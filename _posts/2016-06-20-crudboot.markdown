@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Spring Boot CRUD application"
+title:  "Cordova App with REST API call"
 date:   2016-06-02 17:38:45 +0300
 categories: cordova
 ---
@@ -8,5 +8,5 @@ Simple CRUD application with Spring Boot
 
 ![screenshot]({{ site.baseurl }}/img/crudboot.png)
 
-The complete project code can be found from GitHub [repository](https://github.com/juhahinkula/StudentList.git)
+The complete project code can be found from GitHub [repository](https://github.com/juhahinkula/udentList.git)
 
