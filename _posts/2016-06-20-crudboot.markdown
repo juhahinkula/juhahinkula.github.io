@@ -1,0 +1,20 @@
+---
+layout: post
+title:  "Spring Boot CRUD application"
+date:   2016-06-02 17:38:45 +0300
+categories: cordova
+---
+Simple CRUD application with Spring Boot
+
+![screenshot]({{ site.baseurl }}/img/bootcrud.png)
+
+List of technologies used
+* Spring Boot
+* H2 database (Java based in-memory db)
+* Thymeleaf
+* Bootstrap
+
+Project also contains testdata which are inserted runtime by using Spring Boot CommandLineRunner.
+
+The complete project code can be found from GitHub [repository](https://github.com/juhahinkula/StudentList.git)
+
