@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Spring Boot CRUD application"
-date:   2016-06-20 17:38:45 +0300
+date:   2016-06-02 17:38:45 +0300
 categories: cordova
 ---
 Simple CRUD application with Spring Boot
