@@ -16,7 +16,7 @@ List of technologies used
 - Thymeleaf
 - Bootstrap
 
-Project also contains testdata which are inserted runtime by using Spring Boot CommandLineRunner.
+Project also contains testdata which are inserted at runtime by using Spring Boot CommandLineRunner.
 
 The complete project code can be found from GitHub [repository](https://github.com/juhahinkula/StudentList.git)
 
