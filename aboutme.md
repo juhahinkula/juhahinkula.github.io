@@ -1,7 +1,6 @@
 ---
 layout: page
 title: About
-permalink: /about/
 ---
 
 I am software develpement teacher in Haaga-Helia University of Applied Sciences.
