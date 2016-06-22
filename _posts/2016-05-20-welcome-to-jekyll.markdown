@@ -90,7 +90,7 @@ $("#randomImage").click(function(){
     $.ajax({
         url: url + "&date=" + randomDate(new Date(2015, 0, 1), new Date()),
         success: handleResult
-    }); // use promises
+    });
 
     function handleResult(result){
         $("#spaceimage").attr("src", result.url);
