@@ -6,7 +6,7 @@ Getting known React Native
 
 My goal was to test React Native when implementing similar Nasa app that was made with Cordova in older [post](/2016-05-20-welcome-to-jekyll).
 
-The installation of React Native is really straigthforward. The project was quickly created by using React Native CLI. There was now problems to run first Hello World app with Android emulator. I used Android Studio AVD emulators. I started by going through Facebook's [starting guide](https://facebook.github.io/react-native/docs/getting-started.html#content) and good reading about React Native layouts< can be found [here](http://moduscreate.com/react-native-layout-system/).
+The installation of React Native is really straigthforward. The project was quickly created by using React Native CLI. There was now problems to run first Hello World app with Android emulator. I used Android Studio AVD emulators. I started by going through Facebook's [starting guide](https://facebook.github.io/react-native/docs/getting-started.html#content) and good reading about React Native layouts can be found [here](http://moduscreate.com/react-native-layout-system/).
 
 The problems started when I made changes to code and Reloaded JS to emulator. The app changes were not uploaded to emulator. The reason seemed to be BlueStacks Android emulator which was started automatically. When I unistalled BlueStacks everything started to work correctly and I was able to upload chages to emulator.
 
