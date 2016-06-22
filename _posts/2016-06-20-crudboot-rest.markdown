@@ -15,9 +15,10 @@ Just add following method to controller class. Spring uses Jackson JSON library 
 
 Run the application and navigate to localhost:8080/getstudents
 
+This example is Open REST API which is not secure. It can be secured by using Spring Security. 
+
 ![screenshot]({{ site.baseurl }}/img/bootrest.png)
 
-This example is Open REST API which is not secure. It can be secured by using Spring Security. 
 
 
 
