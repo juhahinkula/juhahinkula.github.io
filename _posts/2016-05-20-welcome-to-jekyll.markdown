@@ -1,8 +1,6 @@
 ---
 layout: post
 title:  "Cordova App with REST API call"
-date:   2016-06-02 17:38:45 +0300
-categories: cordova
 ---
 Cordova App
 

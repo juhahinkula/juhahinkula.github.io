@@ -1,8 +1,6 @@
 ---
 layout: post
 title:  "Spring Boot CRUD application"
-date:   2016-06-02 17:38:45 +0300
-categories: spring
 ---
 Simple CRUD application with Spring Boot
 
