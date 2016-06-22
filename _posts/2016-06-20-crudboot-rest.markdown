@@ -2,7 +2,7 @@
 layout: post
 title:  "REST service with Spring Boot"
 ---
-It is very easy to implement REST service to StudentList example that was made in previous [blog]().
+It is very easy to implement REST service to StudentList example that was made in previous [blog](/2016-06-16-crudboot).
 
 Just add following method to controller class.
 
