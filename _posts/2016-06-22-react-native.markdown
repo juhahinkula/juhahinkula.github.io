@@ -4,7 +4,7 @@ title:  "Getting known React Native"
 ---
 Getting known React Native
 
-My goal was to test React Native when implementing similar Nasa app that was made with Cordova in older [post](/posts/2016-05-20-welcome-to-jekyll).
+My goal was to test React Native when implementing similar Nasa app that was made with Cordova in older [post](/2016-05-20-welcome-to-jekyll).
 
 The installation of React Native is really straigthforward. The project was quickly created by using React Native CLI. There was now problems to run first Hello World app with Android emulator. I used Android Studios AVD.
 
