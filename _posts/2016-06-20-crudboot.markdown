@@ -9,6 +9,8 @@ Simple CRUD application with Spring Boot
 ![screenshot]({{ site.baseurl }}/img/bootcrud.png)
 
 List of technologies used
+
+
 - Spring Boot
 - H2 database (Java based in-memory db)
 - Thymeleaf
