@@ -61,29 +61,29 @@ renderInitialView() {
   
 renderMainView() {
 	return {
-		<View style={styles.container}>
-			<View style ={styles.header}>
-            <View style={styles.header}>
-                <TouchableHighlight style={styles.button} underlayColor='#99d9f4' 
-                onPress={this.onLoadPressed.bind(this)}> 
-                    <Text style={styles.buttonText}>Load Image</Text>
-                </TouchableHighlight>    
-                <TouchableHighlight style={styles.button} underlayColor='#99d9f4' 
-                onPress={this.onRandomPressed.bind(this)}> 
-                    <Text style={styles.buttonText}>Load Random</Text>
-                </TouchableHighlight>                     
-             </View> 
-			</View>
-			<View style={styles.copyright}>
-				<Text>Copyright: {this.state.nasaData.copyright}</Text>
-			</View>
-			<View style={styles.image}>        
-				<Image source={{uri: this.state.nasaData.url}} style={{width: 400, height: 400}} />
-			</View>
-			<ScrollView ref='scrollView' keyboardDismissMode='interactive' style={styles.scrollView}>
-				<Text style={styles.footer}>{this.state.nasaData.explanation}</Text>
-			</ScrollView>
-		</View>
+    <View style={styles.container}>
+        <View style ={styles.header}>
+        <View style={styles.header}>
+            <TouchableHighlight style={styles.button} underlayColor='#99d9f4' 
+            onPress={this.onLoadPressed.bind(this)}> 
+                <Text style={styles.buttonText}>Load Image</Text>
+            </TouchableHighlight>    
+            <TouchableHighlight style={styles.button} underlayColor='#99d9f4' 
+            onPress={this.onRandomPressed.bind(this)}> 
+                <Text style={styles.buttonText}>Load Random</Text>
+            </TouchableHighlight>                     
+         </View> 
+        </View>
+        <View style={styles.copyright}>
+            <Text>Copyright: {this.state.nasaData.copyright}</Text>
+        </View>
+        <View style={styles.image}>        
+            <Image source={{uri: this.state.nasaData.url}} style={{width: 400, height: 400}} />
+        </View>
+        <ScrollView ref='scrollView' keyboardDismissMode='interactive' style={styles.scrollView}>
+            <Text style={styles.footer}>{this.state.nasaData.explanation}</Text>
+        </ScrollView>
+    </View>
 	};
 }
 {% endhighlight %}
