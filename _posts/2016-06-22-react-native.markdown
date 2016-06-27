@@ -3,7 +3,6 @@ layout: post
 title:  "Getting known React Native"
 subtitle: "Simple Android app"
 ---
-
 My goal was to test React Native when implementing similar Android Nasa app that was made with Cordova in older [post](/2016-05-20-welcome-to-jekyll).
 
 The installation of React Native is really straigthforward. The project was quickly created by using React Native CLI. There was now problems to run first Hello World app with Android emulator. I used Android Studio AVD emulators. I started by going through Facebook's [starting guide](https://facebook.github.io/react-native/docs/getting-started.html#content) and good reading about React Native layouts can be found [here](http://moduscreate.com/react-native-layout-system/). 
@@ -87,7 +86,7 @@ renderMainView() {
 }
 {% endhighlight %}
 
-The source code of the Android app can be found from GitHub
+The source code of the Android app can be found from [GitHub](https://github.com/juhahinkula/ReactNasa.git).
 
 Screenshot of the main view. 'Load Image' - button loads the image of the day and 'Load Random' - button loads the random image from the past. I would also like to test using Android date picker for selecting date of the image to be loaded.
 
