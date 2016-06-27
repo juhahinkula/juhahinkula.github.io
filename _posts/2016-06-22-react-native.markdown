@@ -86,7 +86,7 @@ renderMainView() {
 }
 {% endhighlight %}
 
-The source code of the Android app can be found from [GitHub](https://github.com/juhahinkula/ReactNasa.git).
+The source code of the Android app can be found from [GitHub](https://github.com/juhahinkula/NasaReact.git).
 
 Screenshot of the main view. 'Load Image' - button loads the image of the day and 'Load Random' - button loads the random image from the past. I would also like to test using Android date picker for selecting date of the image to be loaded.
 
