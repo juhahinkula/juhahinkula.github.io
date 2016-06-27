@@ -13,7 +13,7 @@ The problems started when I made changes to code and Reloaded JS to emulator. Th
 The REST API call was really easy to implement and worked straigth away. The GUI contains two buttons for showing the daily image and random image. 
 
 
-Constructor contains intial state nasaData which is used to save REST API call JSON response. This is also used to determine whether the data has been loaded.
+Constructor contains intial state nasaData which is used to bind REST API call JSON response. This is also used to determine whether the data has been loaded.
 
 {% highlight javascript %}
   constructor(props) {
@@ -46,10 +46,12 @@ renderInitialView() {
          <View style={styles.container}> 
             <View style={styles.mainheader}>
                 <Text style={styles.headertext}>NasaApp</Text>
-                <TouchableHighlight style={styles.button} underlayColor='#99d9f4' onPress={this.onLoadPressed.bind(this)}> 
+                <TouchableHighlight style={styles.button} underlayColor='#99d9f4' 
+                onPress={this.onLoadPressed.bind(this)}> 
                     <Text style={styles.buttonText}>Load Image</Text>
                 </TouchableHighlight>    
-                <TouchableHighlight style={styles.button} underlayColor='#99d9f4' onPress={this.onRandomPressed.bind(this)}> 
+                <TouchableHighlight style={styles.button} underlayColor='#99d9f4' 
+                onPress={this.onRandomPressed.bind(this)}> 
                     <Text style={styles.buttonText}>Load Random</Text>
                 </TouchableHighlight>                     
              </View>            
@@ -61,14 +63,16 @@ renderMainView() {
 	return {
 		<View style={styles.container}>
 			<View style ={styles.header}>
-				<View style={styles.header}>
-					<TouchableHighlight style={styles.button} underlayColor='#99d9f4' onPress={this.onLoadPressed.bind(this)}> 
-						<Text style={styles.buttonText}>Load Image</Text>
-					</TouchableHighlight>    
-					<TouchableHighlight style={styles.button} underlayColor='#99d9f4' onPress={this.onRandomPressed.bind(this)}> 
-						<Text style={styles.buttonText}>Load Random</Text>
-					</TouchableHighlight>                     
-				 </View> 
+            <View style={styles.header}>
+                <TouchableHighlight style={styles.button} underlayColor='#99d9f4' 
+                onPress={this.onLoadPressed.bind(this)}> 
+                    <Text style={styles.buttonText}>Load Image</Text>
+                </TouchableHighlight>    
+                <TouchableHighlight style={styles.button} underlayColor='#99d9f4' 
+                onPress={this.onRandomPressed.bind(this)}> 
+                    <Text style={styles.buttonText}>Load Random</Text>
+                </TouchableHighlight>                     
+             </View> 
 			</View>
 			<View style={styles.copyright}>
 				<Text>Copyright: {this.state.nasaData.copyright}</Text>
@@ -83,6 +87,8 @@ renderMainView() {
 	};
 }
 {% endhighlight %}
+
+The whole source code can be found from GitHub
 
 Screenshot of the main view.
 
