@@ -4,14 +4,13 @@ title:  "Getting known React Native"
 ---
 Getting known React Native
 
-My goal was to test React Native when implementing similar Nasa app that was made with Cordova in older [post](/2016-05-20-welcome-to-jekyll).
+My goal was to test React Native when implementing similar Android Nasa app that was made with Cordova in older [post](/2016-05-20-welcome-to-jekyll).
 
 The installation of React Native is really straigthforward. The project was quickly created by using React Native CLI. There was now problems to run first Hello World app with Android emulator. I used Android Studio AVD emulators. I started by going through Facebook's [starting guide](https://facebook.github.io/react-native/docs/getting-started.html#content) and good reading about React Native layouts can be found [here](http://moduscreate.com/react-native-layout-system/). 
 
 The problems started when I made changes to code and Reloaded JS to emulator. The app changes were not uploaded to emulator. The reason seemed to be BlueStacks Android emulator which was started automatically. When I unistalled BlueStacks everything started to work correctly and I was able to upload chages to emulator.
 
 The REST API call was really easy to implement and worked straigth away. The GUI contains two buttons for showing the daily image and random image. 
-
 
 Constructor contains intial state nasaData which is used to bind REST API call JSON response. This is also used to determine whether the data has been loaded.
 
@@ -88,11 +87,12 @@ renderMainView() {
 }
 {% endhighlight %}
 
-The whole source code can be found from GitHub
+The source code of the Android app can be found from GitHub
 
-Screenshot of the main view.
+Screenshot of the main view. 'Load Image' - button loads the image of the day and 'Load Random' - button loads the random image from the past. I would also like to test using Android date picker for selecting date of the image to be loaded.
 
 ![screenshot]({{ site.baseurl }}/img/reactnative.png)
+
 
 
 
