@@ -17,12 +17,21 @@ for (var i = 0; i < alphabets.length; i++) {
         $('#letters').controlgroup("container").append('<Button class="ui-btn ui-enabled" id=' + alphabets[i] + '>' + alphabets[i] + '</Button>');
 
     $( '#' + alphabets[i] ).bind( "click", function() {
-        $(this).addClass('ui-disabled'); 
-            
+        $(this).addClass('ui-disabled');             
         checkGuess($(this).attr('id'));
     });            
 }
 {% endhighlight %}
+
+The game logic is implemented inside checkGuess function.
+
+In this version the wordlist are done with array. 
+
+{% highlight javascript %}
+var words = ['policeman', 'tobacco', 'university', 'neighborhood', 'explanation', 'accident', 'understand']; 
+{% endhighlight %}
+
+This is not an optimal solution. Better would be read words from some API service or from a file or database.
 
 The source code of the Hangman can be found from [GitHub](https://github.com/juhahinkula/HangMan.git).
 
