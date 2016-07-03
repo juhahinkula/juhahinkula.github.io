@@ -7,8 +7,8 @@ title:  "Hangman game with Phonegap"
 This is simple example of the hangman game was made by using following tecnologies
 
 
--Phonegap / Cordova
--JQuery Mobile
+- Phonegap / Cordova
+- JQuery Mobile
 
 The source code of the Hangman can be found from [GitHub](https://github.com/juhahinkula/HangMan.git).
 
