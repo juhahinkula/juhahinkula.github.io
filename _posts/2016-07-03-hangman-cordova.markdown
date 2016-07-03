@@ -31,9 +31,9 @@ In this version the wordlist are done with array.
 var words = ['policeman', 'tobacco', 'university', 'neighborhood', 'explanation', 'accident', 'understand']; 
 {% endhighlight %}
 
-This is not an optimal solution. Better would be read words from some API service or from a file or database. I will test cordova file plugin to implement file based wordlist.
+This is not an optimal solution. Better would be read words from some API service or from a file or database. I will test cordova file plugin to implement file based wordlist later.
 
-The theme is done with [ThemeRoller](https://themeroller.jquerymobile.com/) which is tool for create your own themes for JQuery Mobile. You can download your own theme as a zip file and extract css files to your project.
+The theme is done with [ThemeRoller](https://themeroller.jquerymobile.com/) which is tool for creating your own themes for JQuery Mobile. You can download your own theme as a zip file and extract css files to your project.
 
 The source code of the Hangman can be found from [GitHub](https://github.com/juhahinkula/HangMan.git).
 
