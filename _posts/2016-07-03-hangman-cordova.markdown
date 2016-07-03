@@ -6,7 +6,7 @@ title:  "Hangman game with Phonegap"
 
 The source code of the Hangman can be found from [GitHub](https://github.com/juhahinkula/HangMan.git).
 
-Screenshot of the game
+Screenshot of the game.
 
 ![screenshot]({{ site.baseurl }}/img/hangman.png)
 
