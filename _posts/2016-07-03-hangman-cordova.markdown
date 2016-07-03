@@ -2,7 +2,7 @@
 layout: post
 title:  "Hangman game with Phonegap"
 ---
-My goal was to test React Native when implementing similar Android Nasa app that was made with Cordova in older [post](/2016-05-20-welcome-to-jekyll).
+[Phonegap](http://http://phonegap.com/products/) is the open source distribution of Apache Cordova. Phonegap has made desktop application that makes easier to create new project and run that in browser. With Phonegap's developer app you can quickly see how your mobile app looks on real device.
 
 The source code of the Hangman can be found from [GitHub](https://github.com/juhahinkula/HangMan.git).
 
