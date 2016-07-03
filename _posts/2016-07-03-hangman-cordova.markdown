@@ -10,6 +10,20 @@ This is simple example of the hangman game was made by using following tecnologi
 - Phonegap / Cordova
 - JQuery Mobile
 
+The alphabet buttons are implemented by using JQuery Mobile controlgroup. The buttons are added to controlgroup dynamically. Following code also attach click listeners to buttons.
+
+{% highlight javascript %}
+for (var i = 0; i < alphabets.length; i++) {
+        $('#letters').controlgroup("container").append('<Button class="ui-btn ui-enabled" id=' + alphabets[i] + '>' + alphabets[i] + '</Button>');
+
+    $( '#' + alphabets[i] ).bind( "click", function() {
+        $(this).addClass('ui-disabled'); 
+            
+        checkGuess($(this).attr('id'));
+    });            
+}
+{% endhighlight %}
+
 The source code of the Hangman can be found from [GitHub](https://github.com/juhahinkula/HangMan.git).
 
 Screenshot of the game.
