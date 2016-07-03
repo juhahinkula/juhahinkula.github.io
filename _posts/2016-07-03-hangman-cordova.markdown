@@ -31,7 +31,7 @@ In this version the wordlist are done with array.
 var words = ['policeman', 'tobacco', 'university', 'neighborhood', 'explanation', 'accident', 'understand']; 
 {% endhighlight %}
 
-This is not an optimal solution. Better would be read words from some API service or from a file or database.
+This is not an optimal solution. Better would be read words from some API service or from a file or database. I will test cordova file plugin to implement file based wordlist.
 
 The source code of the Hangman can be found from [GitHub](https://github.com/juhahinkula/HangMan.git).
 
