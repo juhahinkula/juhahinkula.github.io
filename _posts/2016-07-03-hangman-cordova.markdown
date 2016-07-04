@@ -47,4 +47,4 @@ Screenshot of the game.
 
 Hangman running on Android phone (Phonegap Developer app)
 
-![screenshot]({{ site.baseurl }}/img/hangman_device.png)
+![screenshot]({{ site.baseurl }}/img/hangman_device.jpg)
