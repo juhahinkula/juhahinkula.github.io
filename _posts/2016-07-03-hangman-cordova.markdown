@@ -45,6 +45,6 @@ Screenshot of the game.
 
 ![screenshot]({{ site.baseurl }}/img/hangman.png)
 
+Hangman running on Android phone (Phonegap Developer app)
 
-
-
+![screenshot]({{ site.baseurl }}/img/hangman_device.png)
