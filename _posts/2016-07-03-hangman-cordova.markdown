@@ -2,9 +2,9 @@
 layout: post
 title:  "Hangman game with Phonegap"
 ---
-[Phonegap](http://http://phonegap.com/products/) is the open source distribution of Apache Cordova. Phonegap has made desktop application that makes easier to create new project and run that in browser. With Phonegap's developer app you can quickly see how your mobile app looks on real device.
+[Phonegap](http://http://phonegap.com/products/) is the open source distribution of Apache Cordova. Phonegap has made desktop application that makes easier to create new project and run that in browser. With [Phonegap's developer app](https://play.google.com/store/apps/details?id=com.adobe.phonegap.app) you can quickly see how your mobile app looks on real device.
 
-Phonegap desktop app
+Phonegap desktop app: Green bar at the bottom is showing the server address. You can easily watch your app by browsing to server address with web browser or using developer app and real mobile device.
 
 ![screenshot]({{ site.baseurl }}/img/desktopapp.png)
 
