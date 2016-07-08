@@ -17,7 +17,7 @@ List of technologies used
 
 The starting point was the example crud application made in the previous [blog](/2016-06-16-crudboot).
 
-Authentcation was added by using Spring Security. The first step is to add Spiring Security dependency to yout pom.xml file.
+Authentication was added by using Spring Security. The first step is to add Spiring Security dependency to your pom.xml file.
 
 {% highlight xml %}
 <dependencies>
