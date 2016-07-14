@@ -67,7 +67,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 }
 {% endhighlight %}
 
-The login page is done with Thymeleaf. Spring Security provides a filter that intercepts that request and authenticates the user. If the user fails to authenticate, the page is redirected to "/login?error" and login page page displays the appropriate error message.  
+The login page is done with Thymeleaf. Spring Security provides a filter that intercepts the request and authenticates the user. If the user fails to authenticate, the page is redirected to "/login?error" and login page page displays the appropriate error message.  
 
 {% highlight html %}
 <!DOCTYPE html>
