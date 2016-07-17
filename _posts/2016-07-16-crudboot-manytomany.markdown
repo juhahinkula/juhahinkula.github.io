@@ -38,7 +38,7 @@ public Set<Student> getStudents() {
 }
 {% endhighlight %}
 
-It is good to set Spring Boot property for showing sql. Then you can see sql sentences for table creations in the console.
+It is good to set Spring Boot property for logging sql statements. Then you can see sql statements for table creations in the console.
 
 {% highlight java %}
 spring.jpa.show-sql=true
