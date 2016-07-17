@@ -78,7 +78,8 @@ public String addCourse(@PathVariable("id") Long studentId, Model model){
     
 //For saving added course
 @RequestMapping(value="/student/{id}/courses", method=RequestMethod.GET)
-public String studentsAddCourse(@PathVariable Long id, @RequestParam Long courseId, Model model) {
+public String studentsAddCourse(@PathVariable Long id,
+ @RequestParam Long courseId, Model model) {
 	Course course = crepository.findOne(courseId);
 	Student student = repository.findOne(id);
 
