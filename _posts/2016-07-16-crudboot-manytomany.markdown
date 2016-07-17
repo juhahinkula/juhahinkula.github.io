@@ -2,7 +2,7 @@
 layout: post
 title:  "Spring Boot application with JPA many-to-many relationship"
 ---
-Studentlist application from the previous blogs will be used to add many-to-many relation by using JPA. The starting point application can be found from previous [here](/2016-06-16-crudboot-security).
+Studentlist application from the previous blogs will be used to add many-to-many relation by using JPA. The starting point application can be found from previous [blog](/2016-06-16-crudboot-security).
 
 The goal is to add new Course entity which is linked to student with many-to-many link. User should also be able to add new courses to students.
 
