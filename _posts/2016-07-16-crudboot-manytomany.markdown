@@ -33,7 +33,7 @@ Course can be added to students by using the following form (static/templates/ad
 
 ![screenshot]({{ site.baseurl }}/img/manytomany_add.png)
 
-Many-to-many relationship is defined in Student and Course entity classes. @JointTable annotation creates join table. 
+Many-to-many relationship is defined in Student and Course entity classes. @JointTable annotation creates join table. @JoinColumn annotation specifies a column for joining an entity association.
 
 {% highlight java %}
 // Student entity
@@ -73,6 +73,7 @@ List of technologies used
 
 - Spring Boot
 - Spring security
+- Java Persistence API (JPA)
 - H2 database (Java based in-memory db)
 - Thymeleaf
 - Bootstrap
