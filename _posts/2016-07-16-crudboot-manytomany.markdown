@@ -10,7 +10,7 @@ The listpage cointains two actions for deleting students and adding courses to s
 
 ![screenshot]({{ site.baseurl }}/img/manytomany_list.png)
 
-List page also shows studen courses in one column. This column is implemented by using thymeleaf iterator and iteration status. It shows all coruses separetad by comma. See more info about iteration status from [thymelead pages](http://www.thymeleaf.org/doc/tutorials/2.1/usingthymeleaf.html#keeping-iteration-status).
+List page also shows student's courses in one column. This column is implemented by using thymeleaf iterator and iteration status. It shows all student's courses separated by comma. See more info about iteration status from [thymelead pages](http://www.thymeleaf.org/doc/tutorials/2.1/usingthymeleaf.html#keeping-iteration-status).
 
 {% highlight html %}
 <tr th:each = "student : ${students}">
