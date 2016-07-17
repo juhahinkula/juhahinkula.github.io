@@ -65,8 +65,35 @@ spring.jpa.show-sql=true
 
 ![screenshot]({{ site.baseurl }}/img/manytomany_console.png)
 
+Controller contains following changes for adding courses to students.
 
+{% highlight java %}
+//For opening Add Course form
+@RequestMapping(value = "addStudentCourse/{id}", method = RequestMethod.GET)
+public String addCourse(@PathVariable("id") Long studentId, Model model){
+    model.addAttribute("courses", crepository.findAll());
+	model.addAttribute("student", repository.findOne(studentId));
+    return "addStudentCourse";
+}
+    
+//For saving added course
+@RequestMapping(value="/student/{id}/courses", method=RequestMethod.GET)
+public String studentsAddCourse(@PathVariable Long id, @RequestParam Long courseId, Model model) {
+	Course course = crepository.findOne(courseId);
+	Student student = repository.findOne(id);
 
+	if (student != null) {
+		if (!student.hasCourse(course)) {
+			student.getCourses().add(course);
+		}
+		repository.save(student);
+		model.addAttribute("student", crepository.findOne(id));
+		model.addAttribute("courses", crepository.findAll());
+		return "redirect:/students";
+	}
+	return "redirect:/students";
+} 
+{% endhighlight %}
 
 List of technologies used
 
