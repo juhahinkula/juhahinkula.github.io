@@ -6,11 +6,11 @@ Studentlist application from the previous blogs will be used to add many-to-many
 
 The goal is to add new Course entity which is linked to student with many-to-many link. User should also be able to add new courses to students.
 
-The listpage cointains two actions for deleting students and adding courses to students.
+The listpage cointains two actions for deleting students and adding courses to students (static/templates/students.html).
 
 ![screenshot]({{ site.baseurl }}/img/manytomany_list.png)
 
-List page also shows student's courses in one column. This column is implemented by using thymeleaf iterator and iteration status. It shows all student's courses separated by comma. See more info about iteration status from [thymelead pages](http://www.thymeleaf.org/doc/tutorials/2.1/usingthymeleaf.html#keeping-iteration-status).
+List page shows also student's courses in one column. This column is implemented by using thymeleaf iterator and iteration status. It shows all student's courses separated by comma. See more info about iteration status from [thymelead pages](http://www.thymeleaf.org/doc/tutorials/2.1/usingthymeleaf.html#keeping-iteration-status).
 
 {% highlight html %}
 <tr th:each = "student : ${students}">
@@ -29,7 +29,7 @@ List page also shows student's courses in one column. This column is implemented
 </tr>
 {% endhighlight %}
 
-Course can be added to students by using the following form.
+Course can be added to students by using the following form (static/templates/addStudentCourse.html).
 
 ![screenshot]({{ site.baseurl }}/img/manytomany_add.png)
 
