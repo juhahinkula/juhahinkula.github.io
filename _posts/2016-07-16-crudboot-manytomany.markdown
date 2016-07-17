@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Spring Boot application with JPA many-to-many"
+title:  "Spring Boot application with JPA many-to-many relationship"
 ---
 Studentlist application from the previous blogs will be used to add many-to-many relation by using JPA. The starting point application can be found from previous [here](/2016-06-16-crudboot-security).
 
@@ -14,7 +14,7 @@ Course can be added to students by using the following form.
 
 ![screenshot]({{ site.baseurl }}/img/manytomany_add.png)
 
-Many-to-many relation is defined in Student and Course entity classes. @JointTable annotation creates join table. 
+Many-to-many relationship is defined in Student and Course entity classes. @JointTable annotation creates join table. 
 
 {% highlight java %}
 // Student entity
@@ -37,6 +37,15 @@ public Set<Student> getStudents() {
     return students;
 }
 {% endhighlight %}
+
+It is good to set Spring Boot property for showing sql. Then you can see sql sentences for table creations in the console.
+
+{% highlight java %}
+spring.jpa.show-sql=true
+{% endhighlight %}
+
+![screenshot]({{ site.baseurl }}/img/manytomany_console.png)
+
 
 List of technologies used
 
