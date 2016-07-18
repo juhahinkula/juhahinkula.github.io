@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Cordova plugins"
+subtitle: "Sample app with Camera and Geolocation plugins"
 ---
 
 Cordova plugins are add-on codes that provides JavaScript interface to native components. They allow your app to use native device capabilities. 
@@ -49,7 +50,6 @@ function getPosition() {
     }
 }
 {% endhighlight %}
-
 
 The complete project code can be found from GitHub [repository](https://github.com/juhahinkula/CordovaPluginTest.git)
 
