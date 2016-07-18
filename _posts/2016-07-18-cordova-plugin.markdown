@@ -15,6 +15,13 @@ and for choosing images from the system's image library. Plugin can be added to 
 cordova plugin add cordova-plugin-camera
 {% endhighlight %}
 
+Geolocation plugin provides information about the device's location, such as latitude and longitude. Plugin can be added to Cordova project by running the following command
+
+{% highlight javascript %}
+cordova plugin add cordova-plugin-geolocation
+{% endhighlight %}
+
+The sample app have button which opens device camera and shows taken picture. The curren location is shown in the footer.
 
 ![screenshot]({{ site.baseurl }}/img/Screenshot_plugin.png)
 
