@@ -67,7 +67,6 @@ spring.jpa.show-sql=true
 
 
 
-
 List of technologies used
 
 
