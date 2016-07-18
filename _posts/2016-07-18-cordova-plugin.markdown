@@ -21,7 +21,7 @@ Geolocation plugin provides information about the device's location, such as lat
 cordova plugin add cordova-plugin-geolocation
 {% endhighlight %}
 
-The sample app have button which opens device camera and shows taken picture. The curren location is shown in the footer.
+The sample app have button which opens device camera and shows taken picture. The current location is shown in the footer.
 
 ![screenshot]({{ site.baseurl }}/img/Screenshot_plugin.png)
 
