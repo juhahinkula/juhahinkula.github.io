@@ -67,8 +67,6 @@ spring.jpa.show-sql=true
 
 Controller contains following changes for adding courses to students.
 
-<<<<<<< HEAD
-=======
 {% highlight java %}
 //For opening Add Course form
 @RequestMapping(value = "addStudentCourse/{id}", method = RequestMethod.GET)
@@ -97,7 +95,6 @@ public String studentsAddCourse(@PathVariable Long id,
 	return "redirect:/students";
 } 
 {% endhighlight %}
->>>>>>> 6b86a5db483893f9e9241f9aed593fde4822b905
 
 List of technologies used
 

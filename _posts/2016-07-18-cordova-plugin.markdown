@@ -3,7 +3,6 @@ layout: post
 title:  "Cordova plugins"
 subtitle: "Sample app with Camera and Geolocation plugins"
 ---
-
 Cordova plugins are add-on codes that provides JavaScript interface to native components. They allow your app to use native device capabilities. 
 Lot of Cordoca plugins can be found from the following [page](https://cordova.apache.org/plugins/?q=camera).
 
@@ -16,6 +15,13 @@ and for choosing images from the system's image library. Plugin can be added to 
 cordova plugin add cordova-plugin-camera
 {% endhighlight %}
 
+Geolocation plugin provides information about the device's location, such as latitude and longitude. Plugin can be added to Cordova project by running the following command
+
+{% highlight javascript %}
+cordova plugin add cordova-plugin-geolocation
+{% endhighlight %}
+
+The sample app have button which opens device camera and shows taken picture. The current location is shown in the footer.
 
 ![screenshot]({{ site.baseurl }}/img/Screenshot_plugin.png)
 
