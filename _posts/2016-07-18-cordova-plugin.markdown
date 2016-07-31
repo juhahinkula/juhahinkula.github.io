@@ -4,7 +4,7 @@ title:  "Cordova plugins"
 subtitle: "Sample app with Camera and Geolocation plugins"
 ---
 Cordova plugins are add-on codes that provides JavaScript interface to native components. They allow your app to use native device capabilities. 
-Lot of Cordoca plugins can be found from the following [page](https://cordova.apache.org/plugins/?q=camera).
+Lot of Cordova plugins can be found from the following [page](https://cordova.apache.org/plugins/?q=camera).
 
 Following sample app uses two plugins: Camera and Geolocation plugins
 

@@ -108,7 +108,7 @@ Project also contains testdata which are inserted at runtime by using Spring Boo
 
 The complete project code can be found from GitHub [repository](https://github.com/juhahinkula/StudentListSecure.git)
 
-## Part II: Reading users from database & pasword encoding
+## Part II: Reading users from database & password encoding
 
 Next step is to save users to database and use this entity for authentication. 
 
