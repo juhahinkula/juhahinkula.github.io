@@ -135,7 +135,7 @@ public class User {
     @Column(name = "role", nullable = false)
     private String role;
 
-    ... getters ans setters
+    ... getters and setters
 {% endhighlight %}
 
 Username is defined to be unique by using unique constraint. It is not good idea to store password as a plain-text therefore it is saved as encrypted.
