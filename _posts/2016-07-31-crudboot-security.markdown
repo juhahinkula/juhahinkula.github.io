@@ -104,8 +104,88 @@ Student listpage contains logout functionality and shows current auhenticated us
 {% endhighlight %}
 
 
-
 Project also contains testdata which are inserted at runtime by using Spring Boot CommandLineRunner.
 
 The complete project code can be found from GitHub [repository](https://github.com/juhahinkula/StudentListSecure.git)
 
+## Part II: Reading users from database & pasword encoding
+
+Next step is to save users to database and use this entity for authentication. 
+
+The user entity class 
+
+{% highlight java %}
+import javax.persistence.*;
+
+@Entity
+public class User {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id", nullable = false, updatable = false)
+    private Long id;
+
+    // Username with unique constraint
+    @Column(name = "username", nullable = false, unique = true)
+    private String username;
+
+    @Column(name = "password", nullable = false)
+    private String passwordHash;
+
+    @Column(name = "role", nullable = false)
+    private String role;
+
+    ... getters ans setters
+{% endhighlight %}
+
+Username is defined to be unique by using unique constraint. It is not good idea to store password as a plain-text therefore it is saved as encrypted.
+In this example I am using BCrypt password hashing which is really easy to use with Spring framework.
+
+We also have to implement UserDetailsService interface which is Srping core interface for user specific data. The interface requires only one read-only method.
+
+{% highlight java %}
+/**
+ * This class is used by spring controller to authenticate and authorize user
+ **/
+@Service
+public class UserDetailServiceImpl implements UserDetailsService  {
+	private final UserServiceImpl userService;
+
+	@Autowired
+	public UserDetailServiceImpl(UserServiceImpl userService) {
+		this.userService = userService;
+	}
+
+    @Override
+    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException
+    {   
+    	User curruser = userService.getUserByUsername(username);
+    	
+        UserDetails user = new org.springframework.security.core.userdetails.User(username, curruser.getPasswordHash(), true, 
+        		true, true, true, AuthorityUtils.createAuthorityList("USER"));
+        
+        return user;
+    }   
+} 
+{% endhighlight %}
+
+Then we have to do modification to configureGlobal method in WebSecurityConfig class.
+
+{% highlight java %}
+@Autowired
+public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
+    auth.userDetailsService(userDetailsService).passwordEncoder(new BCryptPasswordEncoder());
+}
+{% endhighlight %}
+
+Now the authentication is done against database user entity with crypted passwords.
+
+Inserted testdata now contains one user with crypted password (password = user).
+
+{% highlight java %}
+// Create user with BCrypt encoded password
+User user1 = new User("user", "$2a$06$3jYRJrg0ghaaypjZ/.g4SethoeA51ph3UD4kZi9oPkeMTpjKU5uo6", "USER");
+urepository.save(user1);
+{% endhighlight %}
+
+The complete project code can be found from GitHub [repository](https://github.com/juhahinkula/StudentListFinal.git)
