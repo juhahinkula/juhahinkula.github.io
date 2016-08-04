@@ -6,7 +6,7 @@ Adding tests to simple CRUD application with Spring Boot and Spring Security
 
 The starting point was the example crud application made in the previous [blog](/2016-07-31-crudboot-security). The goal was to create JPA integration testing.
 
-Spring boot version used in this project wast 1.3.6. There is lot of improvements coming for testing in the next Spring boot version 1.4.
+Spring boot version used in this project was 1.3.6. There is lot of improvements coming for testing in the next Spring boot version 1.4.
 
 First thing to do is to add Spring Boot test starter to dependencies. Spring Boot test starter is done for testing Spring Boot applications with libraries including JUnit, Hamcrest and Mockito 
 
@@ -21,12 +21,12 @@ First thing to do is to add Spring Boot test starter to dependencies. Spring Boo
 </dependencies>
 {% endhighlight %}
 
-Spring boot auomatically creates package and one class for tests which you can use as a starting point. The testing is really straighforward if you are familiar with JUnit.
+Spring Initializr auomatically creates package and one class for tests which you can use as a starting point. The testing is really straighforward if you are familiar with JUnit.
 We need Spring4JUnit4ClassRunner (SpringRunner in Spring Boot 1.4) for application context to be created (@RunWith annotation). @SringApplicationConfiguration annotation is used to specify which application contexts are used in tests.
 
 In the test class we have access to application context and we can inject any Spring bean by using @Autowire.
 
-Test methods are defined by using @Test annotation.
+Test methods are defined by using @Test annotation. The following test class creates user and student to database and test that insertion is succeeded.
 
 {% highlight java %}
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -69,6 +69,6 @@ public class CrudbootApplicationTests {
 
 You can run tests by using maven or with IDE. Eclipse contains nice JUnit plugin which shows test results after run.
 
-![screenshot]({{ site.baseurl }}/img/bootcrud_testing.png)
+![screenshot]({{ site.baseurl }}/img/springboot_test.png)
 
 The complete project code can be found from GitHub [repository](https://github.com/juhahinkula/StudentListFinal.git)
