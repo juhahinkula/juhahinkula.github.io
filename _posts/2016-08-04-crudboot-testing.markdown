@@ -6,7 +6,7 @@ Adding tests to simple CRUD application with Spring Boot and Spring Security
 
 The starting point was the example crud application made in the previous [blog](/2016-07-31-crudboot-security). The goal was to create JPA integration testing.
 
-Spring boot version used in this project wast 1.3.6. There is coming a lot of improvements for testing in Spring boot 1.4.
+Spring boot version used in this project wast 1.3.6. There is lot of improvements coming for testing in the next Spring boot version 1.4.
 
 First thing to do is to add Spring Boot test starter to dependencies. Spring Boot test starter is done for testing Spring Boot applications with libraries including JUnit, Hamcrest and Mockito 
 
