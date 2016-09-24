@@ -42,7 +42,7 @@ curl -v localhost:8081/students -u user
 
 ![screenshot]({{ site.baseurl }}/img/curl_students.png)
 
-You can also use POST messages to add data using Spring Data REST
+You can also use POST messages to add or delete data using Spring Data REST
 
 {% highlight xml %}
 curl -i -X POST -H "Content-Type:application/json" -d '{  "firstName" : "Matt",  "lastName" : "Wilder" }' http://localhost:8081/students -u user
