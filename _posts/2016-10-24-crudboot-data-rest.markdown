@@ -53,3 +53,13 @@ curl -i -X POST -H "Content-Type:application/json" -d '{  "firstName" : "Matt", 
 ![screenshot]({{ site.baseurl }}/img/curl_add.png)
 
 This will add new student to database.
+
+You can also use all queries defined in the repository to search entities. Available query reources can be found with following request. Request will return query URIs.
+
+{% highlight xml %}
+curl -v localhost:8081/students/search -u user
+{% endhighlight %}
+
+![screenshot]({{ site.baseurl }}/img/curl_search.png)
+
+
