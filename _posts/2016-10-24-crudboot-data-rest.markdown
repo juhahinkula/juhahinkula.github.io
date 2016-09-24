@@ -22,7 +22,9 @@ As a default Spring Data REST uses public repositories to detect and create REST
 
 When Spring Boot application is up and running you can see the available resources by using GET request to application root.
 
+{% highlight xml %}
 curl -v localhost:8081
+{% endhighlight %}
 
 ![screenshot]({{ site.baseurl }}/img/curl_v.png)
 
@@ -34,13 +36,17 @@ In our project the application is secured with Spring Security therefore the ava
 
 There is one test user in the database which we can use to test resources
 
+{% highlight xml %}
 curl -v localhost:8081/students -u user
+{% endhighlight %}
 
 ![screenshot]({{ site.baseurl }}/img/curl_students.png)
 
 You can also use POST messages to add data using Spring Data REST
 
+{% highlight xml %}
 curl -i -X POST -H "Content-Type:application/json" -d '{  "firstName" : "Matt",  "lastName" : "Wilder" }' http://localhost:8081/students -u user
+{% endhighlight %}
 
 -i parameter will show response message. -X POST defines message to be POST for creating new entity. -H sets the contentype.
 
