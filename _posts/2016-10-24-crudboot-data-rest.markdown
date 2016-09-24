@@ -32,7 +32,7 @@ Spring Data REST returns keys with link objects using HAL as media type. HAL is 
 
 Resources are named according to pluralized entities (Example: Student entity --> students resource). You can use @RepositoryRestResource annotation to change resourse endpoint.
 
-In our project the application is secured with Spring Security therefore the available resourses are also secured. 
+In our project the application is secured with Spring Security therefore the available resources are also secured. 
 
 There is one test user in the database which we can use to test resources
 
@@ -62,4 +62,9 @@ curl -v localhost:8081/students/search -u user
 
 ![screenshot]({{ site.baseurl }}/img/curl_search.png)
 
+To search student by lastName
+
+{% highlight xml %}
+curl -v localhost:8081/students/search?findByLastName?lastName=Wilder -u user
+{% endhighlight %}
 
