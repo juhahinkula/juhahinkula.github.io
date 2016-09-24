@@ -28,7 +28,7 @@ curl -v localhost:8081
 
 Spring Data REST returns keys with link objects using HAL as media type. HAL is a simple format that gives a consistent and easy way to hyperlink between resources in your API.
 
-Resources are named according to pluralized entities (Example: Student entity --> students resource).
+Resources are named according to pluralized entities (Example: Student entity --> students resource). You can use @RepositoryRestResource annotation to change resourse endpoint.
 
 In our project the application is secured with Spring Security therefore the available resourses are also secured. 
 
@@ -37,3 +37,13 @@ There is one test user in the database which we can use to test resources
 curl -v localhost:8081/students -u user
 
 ![screenshot]({{ site.baseurl }}/img/curl_students.png)
+
+You can also use POST messages to add data using Spring Data REST
+
+curl -i -X POST -H "Content-Type:application/json" -d '{  "firstName" : "Matt",  "lastName" : "Wilder" }' http://localhost:8081/students -u user
+
+-i parameter will show response message. -X POST defines message to be POST for creating new entity. -H sets the contentype.
+
+![screenshot]({{ site.baseurl }}/img/curl_add.png)
+
+This will add new student to database.
