@@ -18,7 +18,7 @@ To get started add Spring Data REST to dependencies.
 </dependencies>
 {% endhighlight %}
 
-As a default Spring Data REST uses public repositories to detect and create REST resourses. In out student Spring Boot application there is three public repositories for students, course and users.
+As a default Spring Data REST uses public repositories to detect and create REST resources. In our student Spring Boot application there is three public repositories for students, course and users.
 
 When Spring Boot application is up and running you can see the available resources by using GET request to application root.
 
