@@ -103,10 +103,9 @@ Student listpage contains logout functionality and shows current auhenticated us
 </form>
 {% endhighlight %}
 
-
 Project also contains testdata which are inserted at runtime by using Spring Boot CommandLineRunner.
 
-The complete project code can be found from GitHub [repository](https://github.com/juhahinkula/StudentListSecure.git)
+The complete project code can be found from GitHub [repository](https://github.com/juhahinkula/StudentListFinal.git)
 
 ## Part II: Reading users from database & password encoding
 
@@ -149,24 +148,26 @@ We also have to implement UserDetailsService interface which is Srping core inte
  **/
 @Service
 public class UserDetailServiceImpl implements UserDetailsService  {
-	private final UserServiceImpl userService;
+	private final UserRepository repository;
 
 	@Autowired
-	public UserDetailServiceImpl(UserServiceImpl userService) {
-		this.userService = userService;
+	public UserDetailServiceImpl(UserRepository repository) {
+		this.repository = repository;
 	}
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException
     {   
-    	User curruser = userService.getUserByUsername(username);
+    	User curruser = repository.findByUsername(username);
     	
         UserDetails user = new org.springframework.security.core.userdetails.User(username, curruser.getPasswordHash(), true, 
-        		true, true, true, AuthorityUtils.createAuthorityList("USER"));
+        		true, true, true, AuthorityUtils.createAuthorityList(curruser.getRole()));
         
+        System.out.println("ROLE: " + curruser.getRole());
         return user;
-    }   
-} 
+    }
+    
+}
 {% endhighlight %}
 
 Then we have to do modification to configureGlobal method in WebSecurityConfig class.
@@ -188,4 +189,40 @@ User user1 = new User("user", "$2a$06$3jYRJrg0ghaaypjZ/.g4SethoeA51ph3UD4kZi9oPk
 urepository.save(user1);
 {% endhighlight %}
 
+## Part III: Authorization with Thymeleaf Spring Security dialects
+
+Dialects can be used to show different content to different roles.
+
+Add Thymeleaf security dialect dependency to pom.xml file
+
+{% highlight xml %}
+<dependencies>
+    ...
+		<dependency>
+		    <groupId>org.thymeleaf.extras</groupId>
+		    <artifactId>thymeleaf-extras-springsecurity4</artifactId>
+		    <version>2.1.2.RELEASE</version>
+		</dependency>
+    ...
+</dependencies>
+{% endhighlight %}
+
+Define dialect namespace in your Thymeleaf template
+
+{% highlight html %}
+<html xmlns:th="http://www.thymeleaf.org" 
+	xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+{% endhighlight %}
+
+In our example the user with role 'ADMIN' is able to delete students. Therefore we have to hide delete button from other userrole. Below is the code which will hide the button using sec:authorize inside html element.
+
+{% highlight html %}
+<td>
+    <a th:href="@{/addStudentCourse/{id}(id=${student.id})}" class="btn btn-success btn-xs">Add Course</a>
+    <a sec:authorize="hasAuthority('ADMIN')" th:href="@{/delete/{id}(id=${student.id})}" class="btn btn-danger btn-xs">Delete</a>
+</td>
+{% endhighlight %}
+
+
 The complete project code can be found from GitHub [repository](https://github.com/juhahinkula/StudentListFinal.git)
+
