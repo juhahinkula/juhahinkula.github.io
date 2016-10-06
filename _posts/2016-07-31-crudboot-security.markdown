@@ -184,9 +184,11 @@ Now the authentication is done against database user entity with crypted passwor
 Inserted testdata now contains one user with crypted password (password = user).
 
 {% highlight java %}
-// Create user with BCrypt encoded password
-User user1 = new User("user", "$2a$06$3jYRJrg0ghaaypjZ/.g4SethoeA51ph3UD4kZi9oPkeMTpjKU5uo6", "USER");
-urepository.save(user1);
+// Create users with BCrypt encoded password (user/user, admin/admin)                                     
+User user1 = new User("user", "$2a$06$3jYRJrg0ghaaypjZ/.g4SethoeA51ph3UD4kZi9oPkeMTpjKU5uo6", "USER");    
+User user2 = new User("admin", "$2a$08$bCCcGjB03eulCWt3CY0AZew2rVzXFyouUolL5dkL/pBgFkUH9O4J2", "ADMIN");  
+urepository.save(user1);                                                                                  
+urepository.save(user2);                                                                                  
 {% endhighlight %}
 
 ## Part III: Authorization with Thymeleaf Spring Security dialects
