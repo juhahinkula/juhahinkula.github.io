@@ -2,13 +2,11 @@
 layout: post
 title:  "Spring Boot + React.js"
 ---
-Spring Data REST builds on top of the Spring Data and it allows you to get discovarable REST API to your Spring Boot application. In this blog we use our student example ([repository](https://github.com/juhahinkula/StudentListFinal.git)) project by adding Spring Data REST to it.
-
-I decided to try React.js in frontend with Spring Boot Data REST back end ([see previous post](/2016-10-24-crudboot-data-rest))
+I decided to try React.js in frontend with Spring Boot Data REST back end ([see previous post](/2016-10-24-crudboot-data-rest)).
 
 Greg Turnquist has written excellent [tutorials](https://spring.io/guides/tutorials/react-and-spring-data-rest/) about Spring Boot and React.js and these are good starting point.
 
-The example application uses H2 runtime database and has functionalities to list, add and delete students from the database.
+The example application uses H2 runtime database and has functionalities to list, add and delete students from the database. Stylings are made with Bootstrap.
 
 ![screenshot]({{ site.baseurl }}/img/springreact.png)
 
