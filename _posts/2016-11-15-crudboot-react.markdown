@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Spring Boot + React"
+title:  "Spring Boot + React.js"
 ---
 Spring Data REST builds on top of the Spring Data and it allows you to get discovarable REST API to your Spring Boot application. In this blog we use our student example ([repository](https://github.com/juhahinkula/StudentListFinal.git)) project by adding Spring Data REST to it.
 
