@@ -105,5 +105,5 @@ App component's deleteStudent function execute DELETE request to Spring Boot bac
   }  
 {% endhighlight %}
 
-The complete project code can be found from GitHub [repository](https://github.com/juhahinkula/StudentListFinal.git)
+The complete project code can be found from GitHub [repository](https://github.com/juhahinkula/SpringBootReact.git)
 
