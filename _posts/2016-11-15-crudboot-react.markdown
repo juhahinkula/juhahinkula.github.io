@@ -35,7 +35,7 @@ The React.js frontend is built by using following React components:
 - Student
 - StudentForm
 
-StudentTable component shows all students in the table. 
+StudentTable component renders all students in the table. 
 
 {% highlight javascript %}
 class StudentTable extends React.Component {
@@ -63,7 +63,7 @@ class StudentTable extends React.Component {
 }
 {% endhighlight %}
 
-Student component shows one student row in the table. It will also add delete button to each row with onClick listener. Delete button will call component's deleteStudent function which will then  pass student object to App component's delete function.
+Student component renders one student row in the table. It will also add delete button to each row with onClick listener. Delete button will call component's deleteStudent function which will then  pass student object to App component's delete function.
 
 {% highlight javascript %}
 class Student extends React.Component {
