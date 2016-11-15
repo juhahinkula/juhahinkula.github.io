@@ -30,6 +30,7 @@ Students are fetched from the database by executing GET request to Spring Boot b
 {% endhighlight %}
 
 The React.js frontend is built by using following React components: 
+
 - StudentTable
 - Student
 - StudentForm
