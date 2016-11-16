@@ -105,5 +105,79 @@ App component's deleteStudent function execute DELETE request to Spring Boot bac
   }  
 {% endhighlight %}
 
+StudentForm component renders student form which is used to create new students.
+
+{% highlight javascript %}
+class StudentForm extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {firstname: '', lastname: '', email: ''};
+        this.handleSubmit = this.handleSubmit.bind(this);   
+        this.handleChange = this.handleChange.bind(this);     
+    }
+
+    handleChange(event) {
+        console.log("NAME: " + event.target.name + " VALUE: " + event.target.value)
+        this.setState(
+            {[event.target.name]: event.target.value}
+        );
+    }    
+    
+    handleSubmit(event) {
+        event.preventDefault();
+        var newStudent = {firstname: this.state.firstname, lastname: this.state.lastname, email: this.state.email};
+        this.props.createStudent(newStudent);        
+    }
+    
+    render() {
+      return (
+        <div className="panel panel-default">
+        div className="panel-heading">Create student</div>
+            div className="panel-body">
+            <form className="form-inline">
+                <div className="col-md-2">
+                    <input type="text" placeholder="Firstname" className="form-control"  
+                        name="firstname" onChange={this.handleChange}/>    
+                </div>
+                <div className="col-md-2">       
+                    <input type="text" placeholder="Lastname" className="form-control" 
+                        name="lastname" onChange={this.handleChange}/>
+                </div>
+                <div className="col-md-2">
+                    <input type="text" placeholder="Email" className="form-control" 
+                        name="email" onChange={this.handleChange}/>
+                </div>
+                <div className="col-md-2">
+                    <button className="btn btn-success" onClick={this.handleSubmit}>Save</button>   
+                </div>        
+            </form>
+            </div>      
+        </div>
+    );
+  }
+}
+{% endhighlight %}
+
+handleSubmit creates new student object from the values and pass it to App component createStudent function. handleChange change states when user type something to the input fields. 
+
+createStudent function sends POST request to backend with created student in the body as a JSON object.
+
+{% highlight javascript %}
+  // Create new student
+  createStudent(student) {
+      fetch('http://localhost:8080/api/students', 
+      {   method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(student)
+      })
+      .then( 
+          res => this.loadStudentsFromServer()
+      )
+      .catch( err => cosole.error(err))
+  }
+{% endhighlight %}
+
 The complete project code can be found from GitHub [repository](https://github.com/juhahinkula/SpringBootReact.git)
 
