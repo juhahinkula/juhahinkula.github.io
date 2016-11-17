@@ -11,7 +11,7 @@ Here is steps that you have to do
 1.) Create webpack configuration file (webpack.config.js) in the root directory
 
 'entry' is the location of your code where webpack builds a dependency graph.
-'output' is location and name of the bundled file.
+'output' is the location and name of the bundled file.
 
 {% highlight javascript %}
 module.exports = {
