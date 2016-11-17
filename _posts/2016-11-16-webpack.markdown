@@ -25,3 +25,28 @@ module.exports = {
 
 2.) Add loaders to webpack configuration file
 
+We will define to process files ending with .jsx to be processed by babel. Babel allows us to use ES6 features and JSX.
+
+{% highlight javascript %}
+ ...
+ module: {
+    loaders: [
+      {
+        test: /.jsx/,
+        loader: 'babel',
+        exclude: /node_modules/,
+        query: {
+          presets: ['es2015', 'react']
+        }
+      }
+    ]
+  }
+  ---
+{% endhighlight %}
+
+3.) Initialize package.json file (root of the project)
+
+{% highlight %}
+npm init
+{% endhighlight %}
+
