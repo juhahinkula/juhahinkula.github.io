@@ -2,3 +2,26 @@
 layout: post
 title:  "Getting known Webpack"
 ---
+[Webpack](https://webpack.github.io/) is module bundler which can bundle your assets and javascripts to one or several files. 
+
+We will now transform our previous SpringBootReact project to use webpack. [repository](https://github.com/juhahinkula/SpringBootReact.git)
+
+Here is the steps that you have to do
+
+1.) Create webpack configuration file (webpack.config.js) in the root directory
+
+'entry' is the location of your code where webpack builds a dependency graph.
+'output' is the location and name of the bundled file.
+
+{% highlight javascript %}
+module.exports = {
+  entry: './src/main/webapp/public/App.jsx',
+  output: {
+    path: __dirname + '/src/main/webapp/public', 
+    filename: 'bundle.js' 
+}   
+... 
+{% endhighlight %}
+
+2.) Add loaders to webpack configuration file
+
