@@ -6,7 +6,7 @@ title:  "Getting known Webpack"
 
 We will now transform our previous SpringBootReact project to use webpack. [repository](https://github.com/juhahinkula/SpringBootReact.git)
 
-Here is steps that you have to do
+Here is the steps that you have to do
 
 1.) Create webpack configuration file (webpack.config.js) in the root directory
 
