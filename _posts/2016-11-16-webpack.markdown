@@ -44,36 +44,4 @@ We will define to process files ending with .jsx to be processed by babel. Babel
   ---
 {% endhighlight %}
 
-3.) Initialize package.json file (root of the project)
-
-{% highlight html%}
-npm init
-{% endhighlight %}
-
-4.) Install necessary dependencies
-
-{% highlight html %}
-npm install --save babel-loader
-npm install --save babel-preset react
-npm install --save babel-preset-es2015
-npm install --save babel-core
-npm install --save webpack
-{% endhighlight %}
-
-5.) Remove javascript imports from index.html file
-
-6.) Remove text/babel and change App.jsx to bundle.js from index.html file
-
-{% highlight html %}
-<script src="/public/bundle.js"></script>
-{% endhighlight %}
-
-7.) install webpack globally and run it from the command line
-
-{% highlight html %}
-npm install -g webpack
-{% endhighlight %}
-
-{% highlight html %}
-webpack
-{% endhighlight %}
+3.) Initialize package.json file in the root of the project
