@@ -2,7 +2,7 @@
 layout: post
 title:  "Getting known Webpack"
 ---
-Webpack is module bundler which can bundle your assets and javascripts to one or several files. 
+[Webpack] (https://webpack.github.io/) is module bundler which can bundle your assets and javascripts to one or several files. 
 
 We will now transform our previous SpringBootReact project to use webpack. [repository](https://github.com/juhahinkula/SpringBootReact.git)
 
