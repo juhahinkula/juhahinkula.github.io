@@ -68,6 +68,24 @@ npm install --save webpack
 <script src="/public/bundle.js"></script>
 {% endhighlight %}
 
+7.) Install Bootstrap and css-loader
+
+{% highlight html%}
+npm install --save bootstrap
+npm install --save-dev style-loader css-loader
+{% endhighlight %}
+
+Add CSS loaders to webpack.config.js file
+
+{% highlight html%}
+{
+  test: /\.css$/,
+  loader: 'style!css'
+}
+{% endhighlight %}
+
+This webpack css loader configuration can load css files. See css-loader [documentation](https://github.com/webpack/css-loader).
+
 7.) install webpack globally and run it from the command line
 
 {% highlight html %}
@@ -77,5 +95,7 @@ npm install -g webpack
 {% highlight html %}
 webpack
 {% endhighlight %}
+
+![webpack]({{ site.baseurl }}/img/webpack.png)
 
 Source code can be found from the [repository](https://github.com/juhahinkula/SpringReactWebpack.git)
