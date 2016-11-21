@@ -64,7 +64,7 @@ npm install --save webpack
 
 6.) Add imports to App.jsx file
 
-{% highlight html %}
+{% highlight javascript %}
 import React from 'react';
 import ReactDOM from 'react-dom';
 import 'bootstrap/dist/css/bootstrap.css';
