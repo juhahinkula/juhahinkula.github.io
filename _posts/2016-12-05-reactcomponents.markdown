@@ -12,7 +12,7 @@ First step is to install Skylight. Go to the project root and type following npm
 npm install --save react-skylight
 {% endhighlight %}
 
-Import Skylight to your application by adding followinf statement to App.jsx file
+Import Skylight to your application by adding following statement to App.jsx file
 
 {% highlight javascript %}
 import SkyLight from 'react-skylight';
@@ -63,5 +63,59 @@ this.refs.simpleDialog.hide();
 That is only thing we need to transfer it to modal form.
 
 ![screenshot]({{ site.baseurl }}/img/modal.png)
+
+The other component we are going to use is [react-s-alert](https://github.com/juliancwirko/react-s-alert). We are using it to show toast message after student is deleted.
+
+To install Skylight go to the project root and type following npm command.
+
+{% highlight html %}
+npm install --save react-s-alert
+{% endhighlight %}
+
+Import component and stylings by adding following statement to App.jsx file
+
+{% highlight html %}
+import Alert from 'react-s-alert';
+import 'react-s-alert/dist/s-alert-default.css';
+import 'react-s-alert/dist/s-alert-css-effects/slide.css';
+{% endhighlight %}
+
+Add Alert to App components render() function with 2 sec timeout.
+
+{% highlight html %}
+ render() {
+    return (
+       <div>
+          <StudentTable deleteStudent={this.deleteStudent} students={this.state.students}/> 
+          <StudentForm createStudent={this.createStudent}/>
+          <Alert stack={true} timeout={2000} />
+       </div>
+    );
+  }
+{% endhighlight %}
+
+Alert is shown in deleteStudent function afer succesful deletion.
+
+{% highlight javascrip %}
+  // Delete student
+  deleteStudent(student) {
+      fetch (student._links.self.href,
+      { method: 'DELETE', 
+        credentials: 'same-origin'})
+      .then( 
+          res => this.loadStudentsFromServer()
+      )
+      .then(() => { 
+          Alert.success('Student deleted', {
+            position: 'bottom-left',
+            effect: 'slide'
+          });
+      })
+      .catch( err => console.error(err))                
+  }  
+
+{% endhighlight %}
+
+![screenshot]({{ site.baseurl }}/img/toast.png)
 
 Source code can be found from the [repository](https://github.com/juhahinkula/SpringListReact.git)
