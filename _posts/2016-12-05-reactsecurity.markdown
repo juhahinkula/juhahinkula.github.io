@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "React + Spring Security"
+title:  "React.js + Spring Security"
 ---
 We will now secure our [Spring Boot + React.js application](https://github.com/juhahinkula/SpringReactWebpack.git) by using Spring security. Follow the steps from [older post](/2016-07-31-crudboot-security) to include user entity and Spring Security.
 
