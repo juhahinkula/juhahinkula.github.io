@@ -97,7 +97,7 @@ Add Alert to App components render() function with 2 sec timeout.
 
 Alert is shown in deleteStudent function afer succesful deletion.
 
-{% highlight javascrip %}
+{% highlight javascript %}
   // Delete student
   deleteStudent(student) {
       fetch (student._links.self.href,
