@@ -4,7 +4,7 @@ title:  "React + Spring Security"
 ---
 We will now secure our [Spring Boot + React.js application](https://github.com/juhahinkula/SpringReactWebpack.git) by using Spring security. Follow the steps from [older post](/2016-07-31-crudboot-security) to include user entity and Spring Security.
 
-Spring security configuration class will allow access to public folder because our bundled bundle.js file is there. All other endpoints needs authentication.  Csrf is not covered here therefoe it is disabled.
+Spring security configuration class will allow access to public folder because our bundled bundle.js file is there. All other endpoints needs authentication.  Csrf is not covered here therefore it is disabled.
 
 {% highlight java %}
   @Override
@@ -46,5 +46,20 @@ fetch('/URI', {
 After that we can access secured rest api with react.js frontend. We can also see that now JSESSIONID is included to requests.
 
 ![screenshot]({{ site.baseurl }}/img/cookie.png)
+
+Finally  we can fetch students from the backend with following function.
+
+{% highlight javascript %}
+  loadStudentsFromServer() {
+      fetch('http://localhost:8080/api/students', 
+      {credentials: 'same-origin'}) 
+      .then((response) => response.json()) 
+      .then((responseData) => { 
+          this.setState({ 
+              students: responseData._embedded.students, 
+          }); 
+      });
+  } 
+{% endhighlight %}
 
 Source code can be found from the [repository](https://github.com/juhahinkula/SpringListReact.git)
