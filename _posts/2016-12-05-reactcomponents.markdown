@@ -29,15 +29,15 @@ Now we are ready to use it. We will put our form inside Skylight tags. 'New stud
         <form className="form">
         <div className="col-md-4">
           <input type="text" placeholder="Firstname" className="form-control"  
-name="firstname" onChange={this.handleChange}/>    
+     name="firstname" onChange={this.handleChange}/>    
         </div>
         <div className="col-md-4">       
           <input type="text" placeholder="Lastname" className="form-control" 
-name="lastname" onChange={this.handleChange}/>
+     name="lastname" onChange={this.handleChange}/>
         </div>
         <div className="col-md-4">
           <input type="text" placeholder="Email" className="form-control" 
-name="email" onChange={this.handleChange}/>
+     name="email" onChange={this.handleChange}/>
         </div>
         <div className="col-md-2">
           <button className="btn btn-primary" 
