@@ -74,7 +74,7 @@ npm install --save react-s-alert
 
 Import component and stylings by adding following statement to App.jsx file
 
-{% highlight html %}
+{% highlight javascript %}
 import Alert from 'react-s-alert';
 import 'react-s-alert/dist/s-alert-default.css';
 import 'react-s-alert/dist/s-alert-css-effects/slide.css';
