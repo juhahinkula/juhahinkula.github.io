@@ -66,7 +66,7 @@ That is only thing we need to transfer it to modal form.
 
 The other component we are going to use is [react-s-alert](https://github.com/juliancwirko/react-s-alert). We are using it to show toast message after student is deleted.
 
-To install Skylight go to the project root and type following npm command.
+To install react-s-alert go to the project root and type following npm command.
 
 {% highlight html %}
 npm install --save react-s-alert
