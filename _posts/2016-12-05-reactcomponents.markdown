@@ -117,6 +117,8 @@ Alert is shown in deleteStudent function afer succesful deletion.
 
 {% endhighlight %}
 
+After student deletion the toast is shown in left bottom corner and it dissapears ater 2 seconds.
+
 ![screenshot]({{ site.baseurl }}/img/toast.png)
 
 Source code can be found from the [repository](https://github.com/juhahinkula/SpringListReact.git)
