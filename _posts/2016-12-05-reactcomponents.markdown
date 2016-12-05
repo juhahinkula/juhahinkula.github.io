@@ -9,16 +9,16 @@ It would be nice to change student form to be modal. We will use react [Skylight
 First step is to install Skylight. Go to the project root and type following npm command.
 
 {% highlight html %}
-	npm install --save react-skylight
+npm install --save react-skylight
 {% endhighlight %}
 
 Import Skylight to your application by adding followinf statement to App.jsx file
 
 {% highlight javascript %}
-  import SkyLight from 'react-skylight';
+import SkyLight from 'react-skylight';
 {% endhighlight %}
 
-Now we aready to use it. We will put our form inside Skylight tags. 'New student'- button will be outside and it will be shown in the listpage. The modal form is opened when button is pressed. 
+Now we are ready to use it. We will put our form inside Skylight tags. 'New student'- button will be outside and it will be shown in the listpage. The modal form is opened when button is pressed. 
 
 {% highlight javascript %}
   <div>
