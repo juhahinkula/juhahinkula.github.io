@@ -47,4 +47,4 @@ After that we can access secured rest api with react.js frontend. We can also se
 
 ![screenshot]({{ site.baseurl }}/img/cookie.png)
 
-Source code can be found from the [repository](https://github.com/juhahinkula/SpringReactFinal.git)
+Source code can be found from the [repository](https://github.com/juhahinkula/SpringListReact.git)
