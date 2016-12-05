@@ -86,7 +86,8 @@ Add Alert to App components render() function with 2 sec timeout.
  render() {
     return (
        <div>
-          <StudentTable deleteStudent={this.deleteStudent} students={this.state.students}/> 
+          <StudentTable deleteStudent={this.deleteStudent} 
+            students={this.state.students}/> 
           <StudentForm createStudent={this.createStudent}/>
           <Alert stack={true} timeout={2000} />
        </div>
