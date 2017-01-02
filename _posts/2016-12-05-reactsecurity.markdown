@@ -62,4 +62,4 @@ Finally  we can fetch students from the backend with following function.
   } 
 {% endhighlight %}
 
-Source code can be found from the [repository](https://github.com/juhahinkula/SpringListReact.git)
+Source code can be found from the [repository](https://github.com/juhahinkula/StudentListReact.git)

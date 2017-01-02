@@ -121,4 +121,4 @@ After student deletion the toast is shown in left bottom corner and it dissapear
 
 ![screenshot]({{ site.baseurl }}/img/toast.png)
 
-Source code can be found from the [repository](https://github.com/juhahinkula/SpringListReact.git)
+Source code can be found from the [repository](https://github.com/juhahinkula/StudentListReact.git)
