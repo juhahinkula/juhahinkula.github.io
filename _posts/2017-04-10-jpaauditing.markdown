@@ -5,7 +5,7 @@ title:  "Spring Boot & JPA Auditing"
 
 Database auditing means logging the persistent entities. In the business applications we are often interested in who created the record and when. JPA auditing allows you to record who, what and when for each entity object. 
 
-If you have existing SPring Boot JPA application you need following steps to enable auditing.
+If you have existing Spring Boot JPA application you need following steps to enable auditing.
 
 1.) Entity annotations
 
@@ -69,7 +69,7 @@ class AuditConfig {
 }
 {% endhighlight %}
 
+Below is the screenshot from the demo todo application with auditing enabled. Source code can be found from the [repository](https://github.com/juhahinkula/todoList.git)
 
 ![screenshot]({{ site.baseurl }}/img/jpa_auditing.png)
 
-Source code can be found from the [repository](https://github.com/juhahinkula/todoList.git)
