@@ -53,11 +53,11 @@ npm init
 4.) Install necessary dependencies
 
 {% highlight html %}
-npm install --save babel-loader
-npm install --save babel-preset react
-npm install --save babel-preset-es2015
 npm install --save babel-core
 npm install --save webpack
+npm install --save babel-loader
+npm install --save babel-preset-react
+npm install --save babel-preset-es2015
 {% endhighlight %}
 
 5.) Remove javascript imports from index.html file
