@@ -88,7 +88,7 @@ Add CSS loaders to webpack.config.js file
 {% highlight html%}
 {
   test: /\.css$/,
-  loader: 'style!css'
+  loader: 'style-loader!css-loader'
 }
 {% endhighlight %}
 
