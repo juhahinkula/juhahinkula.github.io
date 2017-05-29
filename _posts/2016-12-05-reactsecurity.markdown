@@ -62,4 +62,27 @@ Finally  we can fetch students from the backend with following function.
   } 
 {% endhighlight %}
 
+For security reasons, browsers does not handle AJAX calls from outside the current origin. When deploying your
+application to the server you need to enable CORS (Cross-origin resource sharing) support. That can be done by using filters.
+
+{% highlight java %}
+@Component
+public class CorsFilter extends OncePerRequestFilter {
+	    @Override
+	    protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, 
+				FilterChain filterChain) throws ServletException, IOException {
+	        response.setHeader("Access-Control-Allow-Origin", "*");
+	        response.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
+	        response.setHeader("Access-Control-Max-Age", "3600");
+	        response.setHeader("Access-Control-Allow-Headers", "authorization, content-type, xsrf-token");
+	        response.addHeader("Access-Control-Expose-Headers", "xsrf-token");
+	        if ("OPTIONS".equals(request.getMethod())) {
+	            response.setStatus(HttpServletResponse.SC_OK);
+	        } else { 
+	            filterChain.doFilter(request, response);
+	        }
+	    }
+}
+{% endhighlight %}
+
 Source code can be found from the [repository](https://github.com/juhahinkula/StudentListReact.git)
