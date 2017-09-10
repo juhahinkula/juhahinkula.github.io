@@ -41,12 +41,11 @@ const firebaseApp = firebase.initializeApp(firebaseConfig);
 {% highlight javascript %}
 {% endhighlight %}
 
-
-
-
+App screenshot
 ![screenshot]({{ site.baseurl }}/img/nativefirebase.png)
 
+Firebase database
 ![screenshot]({{ site.baseurl }}/img/firebase_db.png)
 
-https://github.com/juhahinkula/NativeFirebase.git)
+See the full source code from https://github.com/juhahinkula/NativeFirebase.git)
 
