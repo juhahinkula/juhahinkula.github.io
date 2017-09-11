@@ -82,6 +82,17 @@ The UI is really simple with default stylings. The upperpart has one TextInput f
 }
 {% endhighlight %}
 
+Button will call saveData method when it is clicked. The database listener has push function which takes new todo object as a parameter. New todo object will then be saved to firebase realtime db. Todo get two attributes description and date. Description is kept in state when TextInput is changed. Date is created when new todo is going to be saved.
+
+{% highlight javascript %}
+ saveData = () => {
+    let dat = new Date();
+    let datString = (dat.getMonth() + 1) + "-" + dat.getDate() + "-" + dat.getFullYear();
+    this.itemsRef.push({ description: this.state.description, date: datString});
+};
+{% endhighlight %}
+
+
 App screenshot
 ![screenshot]({{ site.baseurl }}/img/nativefirebase.png)
 
