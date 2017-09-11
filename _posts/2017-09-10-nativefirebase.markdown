@@ -10,9 +10,9 @@ First you have to go to Firebase and create new firebase project. You need certa
 
 ![screenshot]({{ site.baseurl }}/img/firebase_params.png)
 
-You also have to modify rules for your database to be able to test it without authentication (not covered in this blog). Copy following line to your database's rules tab.
+You also have to modify rules for your database to be able to test it without authentication (not covered in this blog). Copy following lines to your database's rules tab.
 
-{% highlight javascript %}
+{% highlight html %}
 {
   "rules": {
     ".read": true,
