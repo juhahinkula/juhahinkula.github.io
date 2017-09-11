@@ -93,7 +93,7 @@ The UI is really simple with default stylings. The upperpart has one TextInput f
 }
 {% endhighlight %}
 
-Button will call saveData method when it is clicked. The database listener has push function which takes new todo object as a parameter. New todo object will then be saved to firebase realtime db. Todo get two attributes description and date. Description is kept in state when TextInput is changed. Date is created when new todo is going to be saved (TODO: change to datetime picker).
+Button will call saveData method when it is clicked. The database listener has push function which takes new todo object as a parameter. New todo object will then be saved to firebase realtime db and it gets an unique key. Todo get two attributes description and date. Description is kept in state when TextInput is changed. Date is created when new todo is going to be saved (TODO: change to datetime picker).
 
 {% highlight javascript %}
  saveData = () => {
@@ -103,7 +103,7 @@ Button will call saveData method when it is clicked. The database listener has p
 };
 {% endhighlight %}
 
-The todos are shown in the FlatList component. We have to add listener for all todo items. The listener will fetch todos from the database and save those to the react state called todos. Todos are saved as an array of JSON objects.
+The todos are shown in the FlatList component. We have to add listener for all todo items. The listener will fetch todos from the database and save those to the react state called todos. Todos are saved as an array of JSON objects. The benefit with Firebase realtime database is that whenever items are added, edited or deleted we will get new result back as a snapshot.
 
 {% highlight javascript %}
   // Fetch todos
