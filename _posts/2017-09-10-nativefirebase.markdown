@@ -67,7 +67,7 @@ Add realtime database reference inside constructor.
 }
 {% endhighlight %}
 
-The UI is really simple with default stylings. The upperpart has one TextInput for typing description for the todo and one Button for saving the todo. FlatList is used to show fetched todos.
+The UI is really simple with default stylings. The upperpart has one TextInput for the todo description and one Button for saving the todo. FlatList is used to show fetched todos.
 
 {% highlight html %}
   render() {
@@ -93,7 +93,7 @@ The UI is really simple with default stylings. The upperpart has one TextInput f
 }
 {% endhighlight %}
 
-Button will call saveData method when it is clicked. The database listener has push function which takes new todo object as a parameter. New todo object will then be saved to firebase realtime db. Todo get two attributes description and date. Description is kept in state when TextInput is changed. Date is created when new todo is going to be saved.
+Button will call saveData method when it is clicked. The database listener has push function which takes new todo object as a parameter. New todo object will then be saved to firebase realtime db. Todo get two attributes description and date. Description is kept in state when TextInput is changed. Date is created when new todo is going to be saved (TODO: change to datetime picker).
 
 {% highlight javascript %}
  saveData = () => {
@@ -101,6 +101,49 @@ Button will call saveData method when it is clicked. The database listener has p
     let datString = (dat.getMonth() + 1) + "-" + dat.getDate() + "-" + dat.getFullYear();
     this.itemsRef.push({ description: this.state.description, date: datString});
 };
+{% endhighlight %}
+
+The todos are shown in the FlatList component. We have to add listener for all todo items. The listener will fetch todos from the database and save those to the react state called todos. Todos are saved as an array of JSON objects.
+
+{% highlight javascript %}
+  // Fetch todos
+  listenForItems(itemsRef) {
+    itemsRef.on('value', (snap) => {
+      var items = [];
+      snap.forEach((child) => {
+        items.push({
+          id: child.key,
+          description: child.val().description,
+          date: child.val().date,
+        });
+      });
+
+      this.setState({
+        todos: items
+      });
+
+    });
+}
+{% endhighlight %}
+
+For the flatlist we have to define keyExtractor and renderItem properties
+{% highlight javascript %}
+  keyExtractor = (item) => item.id;
+
+  renderItem = ({item}) =>
+  <View >
+    <Text>{item.description}, {item.date}</Text>   
+  </View>;
+{% endhighlight %}
+
+And then flatlist can be added to render() function.
+
+{% highlight html %}
+<FlatList
+  data = {this.state.todos}
+  keyExtractor = {this.keyExtractor}
+  renderItem = {this.renderItem}
+/>
 {% endhighlight %}
 
 
