@@ -56,7 +56,30 @@ const firebaseConfig = {
 const firebaseApp = firebase.initializeApp(firebaseConfig);
 {% endhighlight %}
 
+The UI is really simple and with default stylings. The upperpart has one TextInput for typing description for the todo and one Button for saving the todo. FlatList is used to show fetched todos.
+
 {% highlight javascript %}
+  render() {
+    return (
+      <View style={styles.maincontainer}>
+        <View style={styles.inputcontainer}>
+          <TextInput
+          style={{height: 40, width: 200, borderColor: 'gray', borderWidth: 1}}
+          onChangeText={(description) => this.setState({description})}
+          value={this.state.text}
+          />
+          <Button onPress={this.saveData} title="Save" /> 
+        </View>
+        <View style={styles.listcontainer}>
+          <FlatList
+            data = {this.state.todos}
+            keyExtractor = {this.keyExtractor}
+            renderItem = {this.renderItem}
+            />
+        </View>        
+      </View>
+    );
+}
 {% endhighlight %}
 
 App screenshot
