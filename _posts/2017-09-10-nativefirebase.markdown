@@ -10,6 +10,19 @@ First you have to go to Firebase and create new firebase project. You need certa
 
 ![screenshot]({{ site.baseurl }}/img/firebase_params.png)
 
+You also have to modify rules for your database to be able to test it without authentication (not covered in this blog). Copy following line to your database's rules tab.
+
+{% highlight javascript %}
+{
+  "rules": {
+    ".read": true,
+    ".write": true
+  }
+}
+{% endhighlight %}
+
+Now everyone has rights to read and write our database so this really only for test purposes.
+
 When the Firebase project has been created it is time to create React Native app (This example is done for Android).
 
 Create React native app
@@ -25,12 +38,12 @@ npm install --save firebase
 
 Now we are going to modify index.android.js file
 
-Import firebase to your app
+Import firebase module to your app
 {% highlight javascript %}
 import * as firebase from 'firebase';
 {% endhighlight %}
 
-Add configuration parameters (fill with your own ones).
+Add configuration parameters (fill with your own ones) and intialize the app.
 
 {% highlight javascript %}
 const firebaseConfig = {
@@ -42,7 +55,6 @@ const firebaseConfig = {
 
 const firebaseApp = firebase.initializeApp(firebaseConfig);
 {% endhighlight %}
-
 
 {% highlight javascript %}
 {% endhighlight %}
