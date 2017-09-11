@@ -10,7 +10,7 @@ First you have to go to Firebase and create new firebase project. You need certa
 
 ![screenshot]({{ site.baseurl }}/img/firebase_params.png)
 
-You also have to modify rules for your database to be able to test it without authentication (not covered in this blog). Copy following lines to your database's rules tab.
+You also have to modify rules for your database to be able to test it without authentication (not covered in this blog). Copy following lines to your database's rules tab in Firebase console and press Publish button.
 
 {% highlight html %}
 {
@@ -21,11 +21,11 @@ You also have to modify rules for your database to be able to test it without au
 }
 {% endhighlight %}
 
-Now everyone has rights to read and write our database so this really only for test purposes.
+Now everyone has rights to read and write our database so this really only for testing/development purposes.
 
 When the Firebase project has been created it is time to create React Native app (This example is done for Android).
 
-Create React native app
+Create initial React native app
 
 {% highlight javascript %}
 react-native init yourAppName
@@ -36,7 +36,7 @@ Install Firebase
 npm install --save firebase
 {% endhighlight %}
 
-Now we are going to modify index.android.js file
+Now we are going to modify *index.android.js* file
 
 Import firebase module to your app
 {% highlight javascript %}
@@ -54,6 +54,17 @@ const firebaseConfig = {
 };
 
 const firebaseApp = firebase.initializeApp(firebaseConfig);
+{% endhighlight %}
+
+Add realtime database reference inside constructor.
+
+{% highlight javascript %}
+  constructor(props) {
+    super(props);
+    //realtime db reference
+    this.itemsRef = firebaseApp.database().ref('todos');
+    this.state = { description: '', todos: [] };
+}
 {% endhighlight %}
 
 The UI is really simple with default stylings. The upperpart has one TextInput for typing description for the todo and one Button for saving the todo. FlatList is used to show fetched todos.
