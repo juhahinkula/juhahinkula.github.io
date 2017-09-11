@@ -126,7 +126,7 @@ The todos are shown in the FlatList component. We have to add listener for all t
 }
 {% endhighlight %}
 
-For the flatlist we have to define keyExtractor and renderItem properties
+For the flatlist we have to define keyExtractor and renderItem properties. One listitem will show todo's description and date.
 {% highlight javascript %}
   keyExtractor = (item) => item.id;
 
