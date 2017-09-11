@@ -56,7 +56,7 @@ const firebaseConfig = {
 const firebaseApp = firebase.initializeApp(firebaseConfig);
 {% endhighlight %}
 
-The UI is really simple and with default stylings. The upperpart has one TextInput for typing description for the todo and one Button for saving the todo. FlatList is used to show fetched todos.
+The UI is really simple with default stylings. The upperpart has one TextInput for typing description for the todo and one Button for saving the todo. FlatList is used to show fetched todos.
 
 {% highlight html %}
   render() {
