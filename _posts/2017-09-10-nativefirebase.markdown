@@ -99,5 +99,5 @@ App screenshot
 Firebase database
 ![screenshot]({{ site.baseurl }}/img/firebase_db.png)
 
-See the full source code from https://github.com/juhahinkula/NativeFirebase.git
+See the full source code from the [repository](https://github.com/juhahinkula/NativeFirebase.git)
 
