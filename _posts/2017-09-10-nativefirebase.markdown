@@ -67,7 +67,9 @@ Add realtime database reference inside constructor.
 }
 {% endhighlight %}
 
-The UI is really simple with default stylings. The upperpart has one TextInput for the todo description and one Button for saving the todo. FlatList is used to show fetched todos.
+The UI is really simple with default stylings. There is button for adding new todos. FlatList is used to show fetched todos. Add button opens a modal form for entering new todos. Modal is standard React Native component. 
+
+The datepicker component used for this project is [react-native-datepicker](https://github.com/xgfe/react-native-datepicker) and toast component for the messages is [react-native-easy-toast](https://github.com/crazycodeboy/react-native-easy-toast)- See the installation and usage from their sites.
 
 {% highlight html %}
   render() {
@@ -93,36 +95,33 @@ The UI is really simple with default stylings. The upperpart has one TextInput f
 }
 {% endhighlight %}
 
-Button will call saveData method when it is clicked. The database listener has push function which takes new todo object as a parameter. New todo object will then be saved to firebase realtime db and it gets an unique key. Todo get two attributes description and date. Description is kept in state when TextInput is changed. Date is created when new todo is going to be saved (TODO: change to datetime picker).
+Button will call saveData method when it is clicked. The database listener has push function which takes new todo object as a parameter. New todo object will then be saved to firebase realtime db and it gets an unique key. Todo get two attributes description and date. Description and date are kept in react state.
 
 {% highlight javascript %}
- saveData = () => {
-    let dat = new Date();
-    let datString = (dat.getMonth() + 1) + "-" + dat.getDate() + "-" + dat.getFullYear();
-    this.itemsRef.push({ description: this.state.description, date: datString});
+saveData = () => {
+  this.itemsRef.push({ description: this.state.description, date: this.state.date});
+  this.refs.toast.show('Todo saved');
+  this.setState({date: '', modalVisible: false});
 };
 {% endhighlight %}
 
 The todos are shown in the FlatList component. We have to add listener for all todo items. The listener will fetch todos from the database and save those to the react state called todos. Todos are saved as an array of JSON objects. The benefit with Firebase realtime database is that whenever items are added, edited or deleted we will get new result back as a snapshot.
 
 {% highlight javascript %}
-  // Fetch todos
-  listenForItems(itemsRef) {
-    itemsRef.on('value', (snap) => {
-      var items = [];
-      snap.forEach((child) => {
-        items.push({
-          id: child.key,
-          description: child.val().description,
-          date: child.val().date,
-        });
+// Fetch todos
+listenForItems(itemsRef) {
+  itemsRef.on('value', (snap) => {
+    var items = [];
+    snap.forEach((child) => {
+      items.push({
+        id: child.key,
+        description: child.val().description,
+        date: child.val().date,
       });
-
-      this.setState({
-        todos: items
-      });
-
     });
+
+    this.setState({todos: items });
+  });
 }
 {% endhighlight %}
 
