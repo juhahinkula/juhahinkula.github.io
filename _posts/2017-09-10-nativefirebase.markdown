@@ -173,7 +173,7 @@ And then flatlist can be added to render() function.
 
 
 App screenshot
-![screenshot]({{ site.baseurl }}/img/nativefirebase.png)
+![screenshot]({{ site.baseurl }}/img/todolist.png)
 
 Firebase database
 ![screenshot]({{ site.baseurl }}/img/firebase_db.png)
