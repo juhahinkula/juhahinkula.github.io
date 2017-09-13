@@ -172,12 +172,12 @@ And then flatlist can be added to render() function.
 {% endhighlight %}
 
 
-App screenshot
+*App screenshots*
 ![screenshot]({{ site.baseurl }}/img/todolist.png)
 ![screenshot]({{ site.baseurl }}/img/addtodo.png)
 
 
-Firebase database
+*Firebase database*
 ![screenshot]({{ site.baseurl }}/img/firebase_db.png)
 
 See the full source code from the [repository](https://github.com/juhahinkula/NativeFirebase.git)
