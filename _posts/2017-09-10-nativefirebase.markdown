@@ -71,55 +71,6 @@ The UI is really simple with default stylings. There is button for adding new to
 
 The datepicker component used for this project is [react-native-datepicker](https://github.com/xgfe/react-native-datepicker) and toast component for the messages is [react-native-easy-toast](https://github.com/crazycodeboy/react-native-easy-toast). See the installation and usage from their sites.
 
-{% highlight html %}
-render() {
-    return (
-      <View style={styles.maincontainer}>
-        <Modal animationType="slide" transparent={false} visible={this.state.modalVisible}
-        onRequestClose={() => {}} >
-        <View style={styles.inputcontainer}>
-          <TextInput
-          style={{height: 40, width: 200, borderColor: 'gray', borderWidth: 1, marginBottom: 7}}
-          onChangeText={(description) => this.setState({description})}
-          value={this.state.text}
-          placeholder="description"
-          />
-          <DatePicker
-          style={{width: 200, marginBottom: 7}}
-          date={this.state.date}
-          mode="date"
-          placeholder="select date"
-          format="YYYY-MM-DD" 
-          customStyles={{
-            dateIcon: {
-              position: 'absolute',
-              left: 0,
-              top: 4,
-            },
-          }}
-          onDateChange={(date) => {this.setState({date: date})}}
-          />         
-          <Button onPress={this.saveData} title="Save" /> 
-        </View>
-        </Modal>
-        <View style={styles.headercontainer}>                  
-          <Text style={{fontSize: 20, marginRight: 40}}>ALL TODOS</Text>   
-          <Button title="Add" onPress={() => this.setState({modalVisible: true})} />
-        </View>
-        <View style={styles.listcontainer}>
-          <FlatList
-            data = {this.state.todos}
-            keyExtractor = {this.keyExtractor}
-            renderItem = {this.renderItem}
-            style={{marginTop: 20}}
-            />
-        </View>
-        <Toast ref="toast" position="top"/>        
-      </View>
-    );
-  }
-}
-{% endhighlight %}
 
 Button will call saveData method when it is clicked. The database listener has push function which takes new todo object as a parameter. New todo object will then be saved to firebase realtime db and it gets an unique key. Todo get two attributes description and date. Description and date are kept in react state.
 
@@ -172,12 +123,12 @@ And then flatlist can be added to render() function.
 {% endhighlight %}
 
 
-*App screenshots*
+App screenshots
 ![screenshot]({{ site.baseurl }}/img/todolist.png)
 ![screenshot]({{ site.baseurl }}/img/addtodo.png)
 
 
-*Firebase database*
+Firebase database
 ![screenshot]({{ site.baseurl }}/img/firebase_db.png)
 
 See the full source code from the [repository](https://github.com/juhahinkula/NativeFirebase.git)
