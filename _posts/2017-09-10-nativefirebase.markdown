@@ -88,13 +88,6 @@ The datepicker component used for this project is [react-native-datepicker](http
           mode="date"
           placeholder="select date"
           format="YYYY-MM-DD" 
-          customStyles={{
-            dateIcon: {
-              position: 'absolute',
-              left: 0,
-              top: 4,
-            },
-          }}
           onDateChange={(date) => {this.setState({date: date})}}
           />         
           <Button onPress={this.saveData} title="Save" /> 
