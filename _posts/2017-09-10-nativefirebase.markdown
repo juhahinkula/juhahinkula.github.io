@@ -71,7 +71,9 @@ The UI is really simple with default stylings. There is button for adding new to
 
 The datepicker component used for this project is [react-native-datepicker](https://github.com/xgfe/react-native-datepicker) and toast component for the messages is [react-native-easy-toast](https://github.com/crazycodeboy/react-native-easy-toast). See the installation and usage from their sites.
 
-{% highlight javascript %}
+{% highlight html %}
+render() {
+    return (
       <View style={styles.maincontainer}>
         <Modal animationType="slide" transparent={false} visible={this.state.modalVisible}
         onRequestClose={() => {}} >
@@ -107,7 +109,9 @@ The datepicker component used for this project is [react-native-datepicker](http
         </View>
         <Toast ref="toast" position="top"/>        
       </View>
-    )
+    );
+  }
+}
 {% endhighlight %}
 
 Button will call saveData method when it is clicked. The database listener has push function which takes new todo object as a parameter. New todo object will then be saved to firebase realtime db and it gets an unique key. Todo get two attributes description and date. Description and date are kept in react state.
