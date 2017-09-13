@@ -71,7 +71,7 @@ The UI is really simple with default stylings. There is button for adding new to
 
 The datepicker component used for this project is [react-native-datepicker](https://github.com/xgfe/react-native-datepicker) and toast component for the messages is [react-native-easy-toast](https://github.com/crazycodeboy/react-native-easy-toast). See the installation and usage from their sites.
 
-{% highlight html %}
+{% highlight javascript %}
 render() {
     return (
       <View style={styles.maincontainer}>
@@ -165,12 +165,12 @@ And then flatlist can be added to render() function.
 {% endhighlight %}
 
 
-App screenshots
+*App screenshots*
 ![screenshot]({{ site.baseurl }}/img/todolist.png)
 ![screenshot]({{ site.baseurl }}/img/addtodo.png)
 
 
-Firebase database
+*Firebase database*
 ![screenshot]({{ site.baseurl }}/img/firebase_db.png)
 
 See the full source code from the [repository](https://github.com/juhahinkula/NativeFirebase.git)
