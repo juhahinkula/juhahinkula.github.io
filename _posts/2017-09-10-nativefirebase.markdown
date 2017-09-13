@@ -69,29 +69,55 @@ Add realtime database reference inside constructor.
 
 The UI is really simple with default stylings. There is button for adding new todos. FlatList is used to show fetched todos. Add button opens a modal form for entering new todos. Modal is standard React Native component. 
 
-The datepicker component used for this project is [react-native-datepicker](https://github.com/xgfe/react-native-datepicker) and toast component for the messages is [react-native-easy-toast](https://github.com/crazycodeboy/react-native-easy-toast)- See the installation and usage from their sites.
+The datepicker component used for this project is [react-native-datepicker](https://github.com/xgfe/react-native-datepicker) and toast component for the messages is [react-native-easy-toast](https://github.com/crazycodeboy/react-native-easy-toast). See the installation and usage from their sites.
 
 {% highlight html %}
-  render() {
+render() {
     return (
       <View style={styles.maincontainer}>
+        <Modal animationType="slide" transparent={false} visible={this.state.modalVisible}
+        onRequestClose={() => {}} >
         <View style={styles.inputcontainer}>
           <TextInput
-          style={{height: 40, width: 200, borderColor: 'gray', borderWidth: 1}}
+          style={{height: 40, width: 200, borderColor: 'gray', borderWidth: 1, marginBottom: 7}}
           onChangeText={(description) => this.setState({description})}
           value={this.state.text}
+          placeholder="description"
           />
+          <DatePicker
+          style={{width: 200, marginBottom: 7}}
+          date={this.state.date}
+          mode="date"
+          placeholder="select date"
+          format="YYYY-MM-DD" 
+          customStyles={{
+            dateIcon: {
+              position: 'absolute',
+              left: 0,
+              top: 4,
+            },
+          }}
+          onDateChange={(date) => {this.setState({date: date})}}
+          />         
           <Button onPress={this.saveData} title="Save" /> 
+        </View>
+        </Modal>
+        <View style={styles.headercontainer}>                  
+          <Text style={{fontSize: 20, marginRight: 40}}>ALL TODOS</Text>   
+          <Button title="Add" onPress={() => this.setState({modalVisible: true})} />
         </View>
         <View style={styles.listcontainer}>
           <FlatList
             data = {this.state.todos}
             keyExtractor = {this.keyExtractor}
             renderItem = {this.renderItem}
+            style={{marginTop: 20}}
             />
-        </View>        
+        </View>
+        <Toast ref="toast" position="top"/>        
       </View>
     );
+  }
 }
 {% endhighlight %}
 
