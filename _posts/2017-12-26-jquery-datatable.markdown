@@ -39,13 +39,13 @@ Then give an unique id to the table and remove the existing row part.
     <table id="todotable" class="table table-striped">
 		<thead>
 		<tr>
-		    <th>Description</th>
-		    <th>Status</th>
-		    <th>CreatedDate</th>
-		    <th>CreatedBy</th>
+		  <th>Description</th>
+		  <th>Status</th>
+		  <th>CreatedDate</th>
+		  <th>CreatedBy</th>
 		</tr>  
 		</thead>
-     </table>
+    </table>
 {% endhighlight %}
 
 Finally add following javascript to the end of the body section. The script calls getTodos method from our controller and populates the table with returned data.
