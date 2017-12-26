@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Spring Boot & Datatable"
-subtitle: "Tuning tables with jquery datatable"
+title:  "Spring Boot & DataTables"
+subtitle: "Tuning tables with jquery datatables"
 ---
 [Jquery DataTables](https://datatables.net/) table plugin for jquery is really easy-to use tool for tuning your tables. It provides paging, sorting, searching and many more useful features.
 
