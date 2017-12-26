@@ -68,7 +68,7 @@ Finally add following javascript to the end of the body section. The script call
 	</script>
 {% endhighlight %}
 
-That's it and now you have table with paging, sorting and instant search. It is also easy to get excel and pdf export functionality. 
+That's it and now you have todo table with paging, sorting and instant search. It is also easy to get excel and pdf export functionality. 
 
 ![screenshot]({{ site.baseurl }}/img/todo_datatable.png)
 
