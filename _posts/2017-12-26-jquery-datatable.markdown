@@ -23,7 +23,7 @@ First we have to add rest controller method to return our todos in the JSON form
     }   
 {% endhighlight %}
 
-Then we will change our Thymeleaf view called todos.html. First add following dependencies to the view.
+Then we will change our Thymeleaf view called todos.html. First step is to add following dependencies to the view.
 
 {% highlight html %}
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
