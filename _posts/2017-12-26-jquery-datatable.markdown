@@ -54,15 +54,15 @@ Finally add following javascript to the end of the body section. The script call
 	<script>
 	$(document).ready( function () {
 		 var table = $('#todotable').DataTable({
-				"sAjaxSource": "/gettodos",
-				"sAjaxDataProp": "",
-				"order": [[ 0, "asc" ]],
-				"columns": [
-				    { "data": "description"},
-					{ "data": "status"},
-				    { "data": "createdDate"},
-				    { "data": "createdBy"},				    
-				]
+			"sAjaxSource": "/gettodos",
+			"sAjaxDataProp": "",
+			"order": [[ 0, "asc" ]],
+			"columns": [
+				{ "data": "description"},
+				{ "data": "status"},
+				{ "data": "createdDate"},
+				{ "data": "createdBy"},				    
+			]
 		 })
 	});	
 	</script>
