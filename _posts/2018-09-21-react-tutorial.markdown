@@ -16,7 +16,7 @@ Let's create a new React application by using Create React App startkit made by 
 npx create-react-app carfront
 {% endhighlight %}
 
-To start the application you have move into carfront folder made by create-react-app and the start the application.
+To start the application you have to move into carfront folder made by create-react-app and the start the application.
 
 {% highlight xml %}
 cd carfront
