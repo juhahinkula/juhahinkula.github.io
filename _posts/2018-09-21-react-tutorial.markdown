@@ -82,6 +82,16 @@ export default App;
 
 Next, add following code inside your *componentDidMount()* method. The code send a request to the backend */cars* endpoint and parse list of cars from the json response. The cars from the response are then saved to cars state using *setState()* method. The ui is then automatically re-rendered. 
 
+{% highlight java %}
+  componentDidMount() { 
+    fetch('https://carstockrest.herokuapp.com/cars')
+    .then(response => response.json())
+    .then(responseData => {
+      this.setState({cars: responseData})
+    })
+  }
+{% endhighlight %}
+
 The user interface is still empty because we haven't add anything to render() method yet.
 
 
