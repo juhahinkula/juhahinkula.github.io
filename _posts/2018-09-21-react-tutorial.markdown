@@ -10,10 +10,18 @@ The REST API has */cars* endpoint that can be used to get all cars from the data
 
 ![screenshot]({{ site.baseurl }}/img/carlist.PNG)
 
-Let's create a new React application by using Create React App startkit made by Facebook ([https://github.com/facebook/create-react-app]). You need to have Node version 6 or greater installed. The installation of Create React App is done with following npm command.
+Let's create a new React application by using Create React App startkit made by Facebook ([https://github.com/facebook/create-react-app]). You need to have Node version 6 or greater installed. You can create a new React application called carfront with following npx command.
 
 {% highlight xml %}
-npm install -g create-react-app
+npx create-react-app carfront
 {% endhighlight %}
+
+To start the application you have move into carfront folder made by create-react-app and the start the application.
+
+{% highlight xml %}
+cd carfront
+npm start
+{% endhighlight %}
+
 
 
