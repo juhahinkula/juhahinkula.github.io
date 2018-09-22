@@ -58,6 +58,7 @@ export default App;
 
 Next, we will create the constructor and introduce state called cars. That state is array and it is used to keep cars that we get from the response.
 
+{% highlight java %}
 class App extends Component {
   constructor(props) {
     super(props);
@@ -79,4 +80,10 @@ class App extends Component {
 export default App;
 {% endhighlight %}
 
-Next, add following code inside your *componentDidMount()* method. The code send a request to the backend */cars* endpoint and parse list of cars from the json response.
+Next, add following code inside your *componentDidMount()* method. The code send a request to the backend */cars* endpoint and parse list of cars from the json response. The cars from the response are then saved to cars state using *setState()* method. The ui is then automatically re-rendered. 
+
+The user interface is still empty because we haven't add anything to render() method yet.
+
+
+
+CONTINUES SOON...
