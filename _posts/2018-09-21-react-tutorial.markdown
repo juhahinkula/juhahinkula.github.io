@@ -84,7 +84,7 @@ Next, add following code inside your *componentDidMount()* method. The code send
 
 {% highlight javascript %}
   componentDidMount() { 
-    fetch('https://carstockrest.herokuapp.com/cars')
+    fetch("https://carstockrest.herokuapp.com/cars")
     .then(response => response.json())
     .then(responseData => {
       this.setState({cars: responseData})
