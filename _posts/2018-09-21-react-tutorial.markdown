@@ -102,7 +102,7 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 {% endhighlight %}
 
-Then we have to generate TableRow components from our cars using map() function. Finally, we render table rows inside the <Table> component. There is also table header defined using <TableHead> component. Below is the source code of the *render()* method.
+Then we have to generate TableRow components from our cars using map() function. Finally, we render table rows inside the <Table> component. There is also table header defined using TableHead component. Below is the source code of the *render()* method.
 
 {% highlight react %}
  render() {
@@ -143,5 +143,6 @@ Then we have to generate TableRow components from our cars using map() function.
 Now, your user interface should look like following screenshot.
 
 ![screenshot]({{ site.baseurl }}/img/cartable.PNG)
+
 
 CONTINUES SOON...
