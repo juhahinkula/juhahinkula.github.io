@@ -144,5 +144,4 @@ Now, your user interface should look like the following screenshot.
 
 ![screenshot]({{ site.baseurl }}/img/cartable.PNG)
 
-
-CONTINUES SOON...
+This was just quick introduction tutorial that demonstrates how to fetch data from REST API and present response data in the table. If you are interested to learn more you can find my book **Hands-on Fullstack Development with Spring Boot 2.0 and React** from [Amazon](https://www.amazon.com/Hands-Full-Stack-Development-Spring-React-ebook/dp/B07DT9DTS1) or [Packtpub](https://www.packtpub.com/application-development/hands-full-stack-development-spring-boot-20-and-react).
