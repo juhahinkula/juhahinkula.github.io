@@ -37,7 +37,7 @@ The React.js frontend is built by using following React components:
 
 StudentTable component renders all students in the table. 
 
-{% highlight javascript %}
+{% highlight react %}
 class StudentTable extends React.Component {
     constructor(props) {
         super(props);
@@ -65,7 +65,7 @@ class StudentTable extends React.Component {
 
 Student component renders one student row in the table. It will also add delete button to each row with onClick listener. Delete button will call component's deleteStudent function which will then  pass student object to App component's delete function.
 
-{% highlight javascript %}
+{% highlight react %}
 class Student extends React.Component {
     constructor(props) {
         super(props);
@@ -107,7 +107,7 @@ App component's deleteStudent function execute DELETE request to Spring Boot bac
 
 StudentForm component renders student form which is used to create new students.
 
-{% highlight javascript %}
+{% highlight react %}
 class StudentForm extends React.Component {
     constructor(props) {
         super(props);
@@ -162,7 +162,7 @@ handleSubmit creates new student object from the values and pass it to App compo
 
 createStudent function sends POST request to backend with created student in the body as a JSON object.
 
-{% highlight javascript %}
+{% highlight react %}
   // Create new student
   createStudent(student) {
       fetch('http://localhost:8080/api/students', 

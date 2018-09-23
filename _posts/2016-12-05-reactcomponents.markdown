@@ -20,7 +20,7 @@ import SkyLight from 'react-skylight';
 
 Now we are ready to use it. We will put our form inside Skylight tags. 'New student'- button will be outside and it will be shown in the listpage. The modal form is opened when button is pressed. 
 
-{% highlight html %}
+{% highlight react %}
   <div>
     <SkyLight hideOnOverlayClicked ref="simpleDialog">
         <div className="panel panel-default">
@@ -82,7 +82,7 @@ import 'react-s-alert/dist/s-alert-css-effects/slide.css';
 
 Add Alert to App components render() function with 2 sec timeout.
 
-{% highlight html %}
+{% highlight react %}
  render() {
     return (
        <div>

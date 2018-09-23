@@ -140,7 +140,7 @@ Then we have to generate TableRow components from our cars using map() function.
   }
 {% endhighlight %}
 
-Now, your user interface should look like following screenshot.
+Now, your user interface should look like the following screenshot.
 
 ![screenshot]({{ site.baseurl }}/img/cartable.PNG)
 
