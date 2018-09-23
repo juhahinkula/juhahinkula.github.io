@@ -104,7 +104,7 @@ import TableRow from '@material-ui/core/TableRow';
 
 Then we have to generate TableRow components from our cars using map() function. Finally, we render table rows inside the <Table> component. There is also table header defined using <TableHead> component. Below is the source code of the *render()* method.
 
-{% highlight javascript %}
+{% highlight react %}
  render() {
    // Generate table rows
     const rows = this.state.cars.map((row, index) => { return(
