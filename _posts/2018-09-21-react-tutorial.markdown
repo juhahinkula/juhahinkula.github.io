@@ -4,7 +4,7 @@ title:  "React Frontend"
 subtitle: "Create React frontend to existing REST API"
 ---
 
-In this tutorial we will create a simple frontend using React. The backend that we will use  is done with Spring Boot and it can be found from Heroku cloud server ([https://carstockrest.herokuapp.com]). You should have basic knowledge of React and REST API.
+In this tutorial we will create a simple frontend using React. The backend that we will use  is done with Spring Boot and it can be found from Heroku cloud server (https://carstockrest.herokuapp.com). You should have basic knowledge of React and REST API.
 
 The REST API has */cars* endpoint that can be used to get all cars from the database.
 
@@ -121,16 +121,16 @@ Then we have to generate TableRow components from our cars using map() function.
     return (
       <div className="App">
         <Table>
-        <TableHead>
-          <TableRow>
-            <TableCell>Brand</TableCell>
-            <TableCell>Model</TableCell>
-            <TableCell>Color</TableCell>
-            <TableCell>Fuel</TableCell>
-            <TableCell numeric>Year</TableCell>
-            <TableCell numeric>Price (€)</TableCell>
-          </TableRow>
-        </TableHead>
+          <TableHead>
+            <TableRow>
+              <TableCell>Brand</TableCell>
+              <TableCell>Model</TableCell>
+              <TableCell>Color</TableCell>
+              <TableCell>Fuel</TableCell>
+              <TableCell numeric>Year</TableCell>
+              <TableCell numeric>Price (€)</TableCell>
+            </TableRow>
+          </TableHead>
           <TableBody>
             {rows}
           </TableBody>
