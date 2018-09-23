@@ -92,7 +92,19 @@ Next, add following code inside your *componentDidMount()* method. The code send
   }
 {% endhighlight %}
 
-The user interface is still empty because we haven't add anything to render() method yet.
+The user interface is still empty because we haven't add anything to the render() method yet. Let's add Material-UI table that will list cars in our user interface. First, add following component imports to your App.js file. 
+
+{% highlight javascript %}
+import Table from '@material-ui/core/Table';
+import TableBody from '@material-ui/core/TableBody';
+import TableCell from '@material-ui/core/TableCell';
+import TableHead from '@material-ui/core/TableHead';
+import TableRow from '@material-ui/core/TableRow';
+{% endhighlight %}
+
+Then we have to generate TableRow components from our cars using map() function.
+
+
 
 
 
