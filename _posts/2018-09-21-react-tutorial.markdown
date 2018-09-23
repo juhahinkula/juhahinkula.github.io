@@ -4,7 +4,7 @@ title:  "React Frontend"
 subtitle: "Create React frontend to existing REST API"
 ---
 
-In this tutorial we will create a simple frontend using React. The backend that we will use  is done with Spring Boot and it can be found from Heroku cloud server (https://carstockrest.herokuapp.com). You should have basic knowledge of React and REST API.
+In this tutorial we will create a simple frontend using React. The backend that we will use  is done with Spring Boot and it can be found from Heroku cloud server (https://carstockrest.herokuapp.com). Note, you should already have basic knowledge of React and REST API to be able to follow this tutorial.
 
 The REST API has */cars* endpoint that can be used to get all cars from the database.
 
