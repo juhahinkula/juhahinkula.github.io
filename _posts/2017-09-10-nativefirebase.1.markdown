@@ -71,7 +71,7 @@ The UI is really simple with default stylings. There is button for adding new to
 
 The datepicker component used for this project is [react-native-datepicker](https://github.com/xgfe/react-native-datepicker) and toast component for the messages is [react-native-easy-toast](https://github.com/crazycodeboy/react-native-easy-toast). See the installation and usage from their sites.
 
-{% highlight javascript %}
+{% highlight react %}
 render() {
     return (
       <View style={styles.maincontainer}>
@@ -145,7 +145,7 @@ listenForItems(itemsRef) {
 {% endhighlight %}
 
 For the flatlist we have to define keyExtractor and renderItem properties. One listitem will show todo's description and date.
-{% highlight javascript %}
+{% highlight react %}
   keyExtractor = (item) => item.id;
 
   renderItem = ({item}) =>
