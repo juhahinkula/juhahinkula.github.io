@@ -81,7 +81,9 @@ render() {
           onRequestClose={() => {}} >
         <View style={styles.inputcontainer}>
           <TextInput
-            style={{ "{{height: 40, width: 200, borderColor: 'gray', borderWidth: 1, marginBottom: 7"}}}}
+          {% raw %}
+            style={{height: 40, width: 200, borderColor: 'gray', borderWidth: 1, marginBottom: 7}}
+          {% endraw %}
             onChangeText={(description) => this.setState({description})}
             value={this.state.text}
             placeholder="description"
