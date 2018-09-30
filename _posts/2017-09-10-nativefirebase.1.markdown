@@ -75,8 +75,10 @@ The datepicker component used for this project is [react-native-datepicker](http
 render() {
     return (
       <View style={styles.maincontainer}>
-        <Modal animationType="slide" transparent={false} visible={this.state.modalVisible}
-        onRequestClose={() => {}} >
+        <Modal animationType="slide" 
+          transparent={false} 
+          visible={this.state.modalVisible}
+          onRequestClose={() => {}} >
         <View style={styles.inputcontainer}>
           <TextInput
           style={{height: 40, width: 200, borderColor: 'gray', borderWidth: 1, marginBottom: 7}}
