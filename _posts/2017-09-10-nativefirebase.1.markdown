@@ -81,25 +81,26 @@ render() {
           onRequestClose={() => {}} >
         <View style={styles.inputcontainer}>
           <TextInput
-          style={{height: 40, width: 200, borderColor: 'gray', borderWidth: 1, marginBottom: 7}}
-          onChangeText={(description) => this.setState({description})}
-          value={this.state.text}
-          placeholder="description"
+            style={{ "{{height: 40, width: 200, borderColor: 'gray', borderWidth: 1, marginBottom: 7"}}}}
+            onChangeText={(description) => this.setState({description})}
+            value={this.state.text}
+            placeholder="description"
           />
           <DatePicker
-          style={{width: 200, marginBottom: 7}}
-          date={this.state.date}
-          mode="date"
-          placeholder="select date"
-          format="YYYY-MM-DD" 
-          onDateChange={(date) => {this.setState({date: date})}}
+            style={{width: 200, marginBottom: 7}}
+            date={this.state.date}
+            mode="date"
+            placeholder="select date"
+            format="YYYY-MM-DD" 
+            onDateChange={(date) => {this.setState({date: date})}}
           />         
           <Button onPress={this.saveData} title="Save" /> 
         </View>
         </Modal>
         <View style={styles.headercontainer}>                  
           <Text style={{fontSize: 20, marginRight: 40}}>ALL TODOS</Text>   
-          <Button title="Add" onPress={() => this.setState({modalVisible: true})} />
+          <Button title="Add" 
+            onPress={() => this.setState({modalVisible: true})} />
         </View>
         <View style={styles.listcontainer}>
           <FlatList
