@@ -81,18 +81,14 @@ render() {
           onRequestClose={() => {}} >
         <View style={styles.inputcontainer}>
           <TextInput
-          {% raw %}
-            style={{height: 40, width: 200, borderColor: 'gray', 
-            borderWidth: 1, marginBottom: 7}}
-          {% endraw %}
+  {% raw %}style={{height: 40, width: 200, borderColor: 'gray', 
+            borderWidth: 1, marginBottom: 7}}{% endraw %}
             onChangeText={(description) => this.setState({description})}
             value={this.state.text}
             placeholder="description"
           />
           <DatePicker
-          {% raw %}
-            style={{width: 200, marginBottom: 7}}
-          {% endraw %}
+  {% raw %}style={{width: 200, marginBottom: 7}}{% endraw %}
             date={this.state.date}
             mode="date"
             placeholder="select date"
@@ -103,9 +99,7 @@ render() {
         </View>
         </Modal>
         <View style={styles.headercontainer}> 
-        {% raw %}                 
-          <Text style={{fontSize: 20, marginRight: 40}}>ALL TODOS</Text>   
-        {% endraw %}
+  {% raw %}<Text style={{fontSize: 20, marginRight: 40}}>ALL TODOS</Text>{% endraw %}
           <Button title="Add" 
             onPress={() => this.setState({modalVisible: true})} />
         </View>
