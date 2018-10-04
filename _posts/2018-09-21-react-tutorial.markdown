@@ -10,7 +10,7 @@ The REST API has */cars* endpoint that can be used to get all cars from the data
 
 ![screenshot]({{ site.baseurl }}/img/carlist.PNG)
 
-Let's create a new React application by using Create React App startkit made by Facebook ([https://github.com/facebook/create-react-app]). You need to have Node version 6 or greater installed. You can create a new React application called carfront with following npx command.
+Let's create a new React application by using Create React App startkit made by Facebook (https://github.com/facebook/create-react-app)[https://github.com/facebook/create-react-app]. You need to have Node version 6 or greater installed. You can create a new React application called carfront with following npx command.
 
 {% highlight xml %}
 npx create-react-app carfront
@@ -92,7 +92,7 @@ Next, add following code inside your ```componentDidMount()``` method. The code 
   }
 {% endhighlight %}
 
-The user interface is still empty because we haven't add anything to the ```render()``` method yet. Let's add Material-UI table that will list cars in our user interface. First, add following component imports to your App.js file. 
+The user interface is still empty because we haven't add anything to the ```render()``` method yet. Let's add Material-UI table that will list cars in our user interface. First, add following component imports to your **App.js** file. 
 
 {% highlight javascript %}
 import Table from '@material-ui/core/Table';
