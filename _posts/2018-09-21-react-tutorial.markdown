@@ -33,7 +33,7 @@ We will use Material-UI React component library to build a user interface. This 
 npm install @material-ui/core
 {% endhighlight %}
 
-Open your application folder with proper code editor like VSCode. Open the file called App.js in the editor. The first task to do is to show all cars from REST API in the table. For that we have to make a GET request to *https://carstockrest.herokuapp.com/cars* endpoint. We will use fetch API for that. Request to REST API can be done inside the ```componentDidMount()``` lifecycle method that is invoked after the component has been rendered first time. Remove code from the ```render()``` method return statement of the **App.js** file and add the ```componentDidMount()``` method. Now, your **App.js** file should look like the following example code.
+Open your application folder with proper code editor like VSCode. Open the file called App.js in the editor. The first task to do is to show all cars from REST API in the table. For that we have to make a GET request to *https://carstockrest.herokuapp.com/cars* endpoint. We will use fetch API for that. Request to REST API can be done inside the ``` componentDidMount() ``` lifecycle method that is invoked after the component has been rendered first time. Remove code from the ``` render() ``` method return statement of the **App.js** file and add the ``` componentDidMount() ``` method. Now, your **App.js** file should look like the following example code.
 
 {% highlight react %}
 import React, { Component } from 'react';
@@ -80,7 +80,7 @@ class App extends Component {
 export default App;
 {% endhighlight %}
 
-Next, add following code inside your ```componentDidMount()``` method. The code send a request to the backend */cars* endpoint and parse list of cars from the json response. The cars from the response are then saved to cars state using ```setState()``` method. The ui is then automatically re-rendered. 
+Next, add following code inside your ``` componentDidMount() ``` method. The code send a request to the backend */cars* endpoint and parse list of cars from the json response. The cars from the response are then saved to cars state using ``` setState() ``` method. The ui is then automatically re-rendered. 
 
 {% highlight javascript %}
   componentDidMount() { 
@@ -92,7 +92,7 @@ Next, add following code inside your ```componentDidMount()``` method. The code 
   }
 {% endhighlight %}
 
-The user interface is still empty because we haven't add anything to the ```render()``` method yet. Let's add Material-UI table that will list cars in our user interface. First, add following component imports to your **App.js** file. 
+The user interface is still empty because we haven't add anything to the ``` render() ``` method yet. Let's add Material-UI table that will list cars in our user interface. First, add following component imports to your **App.js** file. 
 
 {% highlight javascript %}
 import Table from '@material-ui/core/Table';
@@ -102,7 +102,7 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 {% endhighlight %}
 
-Then we have to generate TableRow components from our cars using ```map()``` function. Finally, we render table rows inside the <Table> component. There is also table header defined using TableHead component. Below is the source code of the ```render()``` method.
+Then we have to generate TableRow components from our cars using ``` map() ``` function. Finally, we render table rows inside the <Table> component. There is also table header defined using TableHead component. Below is the source code of the ``` render() ``` method.
 
 {% highlight react %}
  render() {
